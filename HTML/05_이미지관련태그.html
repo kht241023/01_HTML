@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 관련 태그</title>
+</head>
+<body>
+    <h1>img 태그 사용하기</h1>
+    <pre>
+        -웹 문서에서 사진이나 그림 같은 이미지를 삽입하는 용도의 태그
+
+        [속성]
+        (속성 : 태그 오른쪽에 작성하는 설정)
+
+        1. src : 삽입할 이미지의 경로를 작성하는 속성
+                (파일 위치, 인터넷 주소)
+        2. width / height : 너비 / 높이를 지정하는 속성
+
+        3. alt : 이미지에 대한 설명을 작성하는 속성
+            -> 이미지가 보이지 않을 경우 화면에 이미지 이름이 출력
+            - 스크린 리더가 이미지 설명을 읽어줌
+
+            * 스크린 리더란? 화면의 텍스트를 읽어주는 것
+    
+        이미지는 닫는 태그 없이 단독으로 이미지 태그 한 번만 작성
+        <!--
+           1번 <img src="이미지가져올경로" alt="이미지설명">
+
+           2번 <img src="이미지가져올경로" alt="이미지설명" />
+        
+           1번과 2번은 같은 의미로 사용한 태그
+           2번의 경우 과거에는 태그를 종료할 때 무조건 /> 닫는 모양의 태그를
+           필수적으로 작성해줘야 했기 때문에 부분적으로 사용이 보이기는 하지만
+           /> 사용하지 않아도 문제가 되지는 않음
+
+           /> : 한 줄에 모든 속성이나 표기 내용을 작성하고 마치는 태그 (줄임말처럼 사용)
+        -->
+    </pre>
+
+    <h3>이미지 가져오는 예제</h3>
+    <!-- cm mm px 
+        px 최소 크기 단위
+        mm px보다 큰 크기의 단위
+        cm mm보다 큰 크기의 단위 
+    -->
+    <img src="dog.jpeg" alt="라떼사진" width="300px">
+    <img src="cat.jpeg" alt="야옹이사진" width="300px">
+
+
+    <!-- 메인이미지와 뉴메뉴 사진을 가져와서 보여주기
+         width 가로 = 300px height 세로 = 300px 
+         가로 세로 px 로 고정 크기를 나타낼 수 있고,
+                   % 를 사용해서 크기를 나타낼 수 있음
+         alt 생략 사용x
+    -->
+    <img src="main-image.jpg" width="300px" height="300px">
+    <img src="new-menu.png" width="300px" height="300px" >
+
+    <h3>외부에 저장된 이미지를 가져오는 방법</h3>
+
+    <img src="https://blog.kakaocdn.net/dn/b09Ie6/btqKShjRyXG/XA7WOJZIEeiZiIK3TAK9fK/img.gif">
+    <img src="https://blog.kakaocdn.net/dn/RN3jC/btqKZog10Ui/Teke0cSXvxUlGVz76kleSK/img.gif">
+
+</body>
+</html>
