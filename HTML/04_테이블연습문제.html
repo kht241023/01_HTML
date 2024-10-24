@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테이블 태그 활용하기</title>
+
+    <!--
+    style 태그
+    태그에 스타일을 적용하는 방법은 크게 3가지 존재
+    첫 번째 방법
+    <table style=""> 태그 옆에 스타일 속성을 작성 후 "" 안에 설정
+
+    두 번째 방법
+    <style> 태그를 작성 후 태그 안에 설정하고자 하는 태그명을 작성한다음
+    {} 를 사용해서 스타일 묶어주기
+
+        동일한 스타일을 각각의 태그에 적용할 때
+
+        태그이름, 태그이름, .... {
+            적용할 스타일 속성 작성하기
+        }
+
+        th, td {
+            border: 1px solid black;
+        }
+
+        예제 코드
+
+        태그1번 {
+            속성 A 설정
+        }
+
+        태그2번 {
+            속성 A 설정
+        }
+
+        위 태그1번 2번 작성과 아래  태그1번 2번 작성한 속성 동일
+
+        태그1번, 태그2번 {
+            속성 A 설정
+        }
+
+
+        background-color : 배경색상 설정
+
+        tex-align        : center 글자를 가운데로 정렬하는 속성
+        margin           : 0 auto 테이블과 같은 형태를 가로 가운데 정렬
+
+        -->
+
+
+
+
+
+
+
+    <style>
+        table {
+            border: 1px solid black;
+            border-collapse: collapse;
+            margin: 0 auto;
+        }
+
+        th, td {
+            border: 1px solid black;
+            text-align: center;
+        }
+        
+      
+
+        thead {
+            background-color: rgb(156, 43, 43);
+        }
+
+        tbody {
+            background-color: lightpink;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <h1 style="text-align: center;">상품목록</h1>
+
+
+
+    <!-- 
+    table 태그 옆에 스타일을 작성하는 방법
+    table style="border-collapse: collapse;" border="1"
+     -->
+    <table><!-- 스타일들만 따로 묶어서 작성하는 방법 사용-->
+        <thead>
+            <tr>
+                <th>상품명</th>
+                <th>가격</th>
+                <th>재고</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>노트북</td>
+                <td>1,500,000원</td>
+                <td>5대</td>
+            </tr>
+
+            <tr>
+                <td>스마트폰</td>
+                <td>900,000원</td>
+                <td>10대</td>
+            </tr>
+            <tr>
+                <td>태블릿</td>
+                <td>600,000원</td>
+                <td>7대</td>
+            </tr>
+        </tbody>
+        <!-- 총 상품수가 테이블 안에서 한 줄을 모두 차지할 수 있도록 설정-->
+        <tfoot>
+            <tr>
+                <td colspan="3">총 상품 수 : 3</td>
+            </tr>
+        </tfoot>
+
+
+
+
+
+    </table>
+
+
+
+
+
+
+</body>
+</html>
