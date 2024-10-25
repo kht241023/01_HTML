@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>치킨 주문하기</title>
+    <style>
+      div {
+        text-align: center;
+        border: 1px solid black;
+      }
+      img {
+        width: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>치킨 주문하기</h1>
+
+      <img src="main-image.jpg" />
+      <br />
+      <label>치킨 종류 : </label><br />
+      <input type="radio" name="치킨종류" />후라이드 치킨 <br />
+      <input type="radio" name="치킨종류" />양념 치킨<br />
+      <input type="radio" name="치킨종류" />간장치킨<br />
+      <br />
+
+      <label>소스 추가 (중복 선택 가능):</label><br />
+      <input type="checkbox" name="소스" />치즈소스<br />
+      <input type="checkbox" name="소스" />갈릭소스<br />
+      <input type="checkbox" name="소스" />매운소스<br />
+      <br />
+
+      <label>치킨 수량 : </label>
+      <input type="number" min="1" placeholder="수량입력" />
+
+      <br /><br />
+      <label>전화번호 : </label>
+      <input type="tel" placeholder="예: 010-1234-5678" />
+      <br /><br />
+
+      <label>추가 요청 사항 : </label>
+      <input type="text" placeholder="추가 요청 사항 입력" />
+      <br /><br />
+
+      <input type="submit" value="주문하기" />
+      <br />
+      <br />
+    </div>
+  </body>
+</html>

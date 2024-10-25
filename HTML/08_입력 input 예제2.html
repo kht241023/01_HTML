@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>결혼 정보 회사 가입사이트</title>
+    <style>
+      /*
+        placeholder
+        input 태그 안에 들어있는 속성이기 때문에
+        input 태그에 text-align 글자 위치 설정을 넣어주면
+
+        placeholder에 작성한 디자인이 input태그에 작성한
+        디자인으로 대체될 수 있음
+        
+        */
+      ::placeholder {
+        text-align: center;
+      }
+      input {
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>결혼정보회사 가입</h1>
+    <label>이름 : </label>
+    <input type="text" placeholder="아이디 입력" />
+    <br />
+    <br />
+    <label>비밀번호 : </label>
+    <input type="password" placeholder="비밀번호 입력" />
+    <br />
+    <br />
+    <label>이메일 : </label>
+    <input type="email" placeholder="example@email.com" />
+    <br />
+    <br />
+
+    <label>성별:</label>
+    <br />
+    <br />
+    <input type="radio" name="성별" />
+    남성
+    <br />
+    <input type="radio" name="성별" />
+    여성
+    <br />
+    <br />
+
+    <label>관심사 (중복 선택 가능):</label>
+    <br />
+    <input type="checkbox" name="관심사" />
+    여행
+    <br />
+    <input type="checkbox" name="관심사" />
+    요리
+    <br />
+    <input type="checkbox" name="관심사" />
+    독서
+    <br />
+    <input type="checkbox" name="관심사" />
+    스포츠
+    <br /><br /><br />
+
+    <input type="submit" value="가입 완료" />
+  </body>
+</html>
