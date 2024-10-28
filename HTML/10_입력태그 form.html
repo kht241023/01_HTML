@@ -7,10 +7,42 @@
   </head>
   <body>
     <h1>form 태그</h1>
+    <!--
+    입력 양식을 작성하고 작성된 내용을 제출하는 공간
+    from이 아니라 form태그 작성에 유의할 것
 
-    <form action="결과.html">
+    action : input안에 작성한 내용을 전달할 위치 지정
+    name   : 개발자가 사용자가 작성한 내용의 이름을 지정하는 속성 
+
+     이름 : <input type="text" name="유저-이름" />
+     이름 으로 작성한 것은 고객만 알고있는 표기 개발자는 이름이 존재하는지도 모름
+     
+     개발자의 시선
+     <input type="text" name="유저-이름" />
+
+     고객의 시선
+     이● ┌─────────┐
+     름● └─────────┘
+
+      고객이 네모난 칸(=input 태그) 안에 작성한 값을 유저-이름 이름으로
+      개발자는 작성된 내용을 확인할 수 있음
+    -->
+    <form action="10_결과.html">
       이름 : <input type="text" name="유저-이름" />
       <button>제출하기</button>
+    </form>
+    <hr />
+    <hr />
+    <hr />
+    <!-- 폼 안에 작성한 내용을 10_결과.html 문서로 제출하기-->
+    <form action="10_결과.html">
+      아이디 : <input type="text" name="아이디작성" />
+
+      <br />
+
+      비밀번호 : <input type="password" name="비밀번호작성" />
+
+      <button>로그인(제출하기)</button>
     </form>
   </body>
 </html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="kor">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>결과 확인하기</title>
+  </head>
+  <body>
+    <h1>Result Page</h1>
+    <h3>입력된 사용자 이름 : <span id="name-result"></span></h3>
+    <h3>입력된 사용자 아이디 : <span id="id-result"></span></h3>
+    <h3>입력된 사용자 비밀번호 : <span id="pw-result"></span></h3>
+
+    <script>
+      const 데이터전달하기 = new URL(location.href).searchParams; //최초 1회 작성
+
+      const nameResult = document.getElementById("name-result");
+      nameResult.innerText = 데이터전달하기.get("user-name");
+
+      const idResult = document.getElementById("id-result");
+      idResult.innerText = 데이터전달하기.get("input-id");
+
+      const pwResult = document.getElementById("pw-result");
+      pwResult.innerText = 데이터전달하기.get("input-pw");
+    </script>
+
+    <hr />
+    <h3>입력된 점수값 1번 : <span id="1번점수-결과"></span></h3>
+    <h3>입력된 점수값 2번 : <span id="2번점수-결과"></span></h3>
+    <!-- javaScript 길기 때문에 script로 줄여서 줄임말 작성-->
+    <script>
+      const score1 = document.getElementById("1번점수-결과");
+      const score2 = document.getElementById("2번점수-결과");
+
+      score1.innerText = 데이터전달하기.get("1번점수");
+      score2.innerText = 데이터전달하기.get("2번점수");
+    </script>
+  </body>
+</html>

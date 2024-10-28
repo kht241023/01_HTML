@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form 으로 결과에 제출하기</title>
+  </head>
+  <body>
+    <h1>form 태그를 활용해서 값 제출하기</h1>
+
+    <form action="11_result.html">
+      이름 : <input type="text" name="user-name" /> 아이디 :<input
+        type="text"
+        name="input-id"
+      />
+      비밀번호 : <input type="password" name="input-pw" />
+      <button>제출하기</button>
+    </form>
+
+    <hr />
+    <!-- 
+    11_result.html 점수들 제출
+    name 을 활용해서 작성된 점수가
+    11_result.html 에서 눈으로 확인할 수 있도록 작성
+-->
+    <form action="11_result.html">
+      1번 점수 입력 :
+      <input
+        type="range"
+        min="0"
+        max="200"
+        step="5"
+        value="100"
+        name="1번점수"
+      />
+
+      <br />
+      2번 점수 입력 :
+      <input
+        type="range"
+        min="0"
+        max="200"
+        step="5"
+        value="100"
+        name="2번점수"
+      />
+      <button>제출하기</button>
+    </form>
+  </body>
+</html>
