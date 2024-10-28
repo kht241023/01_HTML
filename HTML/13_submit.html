@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>버튼 형식 태그</title>
+    <style>
+      button {
+        background-color: yellowgreen;
+        border: none; /*테두리 제거*/
+        color: white; /*글자색 설정*/
+        padding: 12px; /*특정 스타일 몸집 키울 때 사용*/
+        border-radius: 5px; /*테두리 둥글게*/
+      }
+    </style>
+  </head>
+  <body>
+    <h1>버튼 형식 태그</h1>
+
+    <h3>input type="submit"</h3>
+    <pre>
+        <input type="submit" value="제출하기" />
+        - form 태그에 작성한 내용을 제출하는 버튼 역할을 함
+          버튼을 누르면 폼 데이터가 action에 지정된 제출 위치로 전송
+        - 텍스트와 아이콘을 함께 넣기 어렵고, 꾸미는데 제한적임
+    </pre>
+
+    <h3>button 관련 태그</h3>
+    <pre>
+        - 기본 타입이 submit 으로 form 태그에 작성한 내용을 제출하는 버튼 역할을 함
+        <button>제출하기</button> type을 submit 로 작성하지 않아도 제출하는 것이 
+        기본 설정이기 때문에 작성을 하지 않아도 됨
+        - 종류 : submit(제출) button(클릭 후 제출이나 초기화 이외 기능 설정) reset(초기화)
+        -이미지나 아이콘을 넣어 버튼을 꾸밀 수 있는 것이 큰 장점
+    </pre>
+  </body>
+</html>
