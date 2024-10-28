@@ -7,13 +7,11 @@
     <style>
       /* 회원가입하기 버튼을 클릭했을 때 결과에서 표시*/
       div {
-        /*
-            가로 크기 50%
-            가운데 정렬 center
-            테두리 선 1px 검정
-            모서리 둥글게 15px
-            공간 확보 20px
-            */
+        width: 50%;
+        text-align: center;
+        border: 1px solid black;
+        border-radius: 15px;
+        padding: 20px;
       }
     </style>
   </head>
@@ -26,11 +24,17 @@
       <h3>이메일 : <span id="email-result"></span></h3>
     </div>
     <script>
+      /*
+        const 새로운 단어를 생성할경우
+        script 내에서 맨 위 상단에 작성
+        
+        */
       const A군 = new URL(location.href).searchParams;
 
       // html id에 작성한 글자와 javascript로 작성한 글자에서
       // 동일한 의미를 가진 글자끼리 연결하기
       const nameResult = document.getElementById("name-result");
+
       const idResult = document.getElementById("id-result");
       const pwResult = document.getElementById("pw-result");
       const emailResult = document.getElementById("email-result");
