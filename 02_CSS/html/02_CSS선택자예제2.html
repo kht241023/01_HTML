@@ -5,28 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>선택자 2 활용하기</title>
     <style>
-      ul {
+      .num-ul {
         /* 기본 리스트 스타일 제거 */
         list-style-type: none;
       }
-      li {
+      .num-li {
         padding: 15px;
         background-color: lightgray;
         border-radius: 8px;
         font-size: 18px;
+        /*
+        margin
+        <br > 태그 대신 상하좌우 공간 여백 설정 할 수 있는 속성*/
         margin: 30px;
+      }
+      li:hover {
+        background-color: lightcoral;
+        color: white;
+        /*
+        transform: 움직일 때 사용하는 속성
+        translateX(20px)  -> 오른쪽으로 약간 이동
+        translateX(-20px)  -> 왼쪽으로 약간 이동
+        translateY(-20px)  -> 위쪽으로 약간 이동
+        translateY(20px)  -> 아래쪽으로 약간 이동
+        */
+        transform: translateX(-20px);
+      }
+      .알파벳-ul {
+        list-style-type: none;
+      }
+      .알파벳-li {
+        padding: 20px;
+        margin: 10px;
+        background-color: #ddd;
+        border-radius: 8px;
+        font-size: 20px;
+        /* hover 로 변경될 때 속도를 빠르게 하거나 느리게 할 수 있음 
+        transition: transform 0.5s;  숫자가 커질수록 느려짐
+        */
+        transition: transform 0.5s;
+      }
+      .알파벳-li:hover {
+        background-color: black;
+        color: white;
+        transform: translateX(-15px);
       }
     </style>
   </head>
   <body>
     <div class="컨테이너">
       <h1>Hover 효과가 있는 리스트</h1>
-      <ul>
-        <li>리스트 항목 1</li>
-        <li>리스트 항목 2</li>
-        <li>리스트 항목 3</li>
-        <li>리스트 항목 4</li>
-        <li>리스트 항목 5</li>
+      <ul class="num-ul">
+        <li class="num-li">리스트 항목 1</li>
+        <li class="num-li">리스트 항목 2</li>
+        <li class="num-li">리스트 항목 3</li>
+        <li class="num-li">리스트 항목 4</li>
+        <li class="num-li">리스트 항목 5</li>
+      </ul>
+
+      <ul class="알파벳-ul">
+        <li class="알파벳-li">리스트 항목 A</li>
+        <li class="알파벳-li">리스트 항목 B</li>
+        <li class="알파벳-li">리스트 항목 C</li>
+        <li class="알파벳-li">리스트 항목 D</li>
+        <li class="알파벳-li">리스트 항목 E</li>
       </ul>
     </div>
   </body>
