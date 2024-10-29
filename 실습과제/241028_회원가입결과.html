@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>맛있어 치킨가게 회원가입 결과</title>
+    <!-- 
+    style 태그에 직접적으로 디자인을 하나씩 작성하지 않고
+    따로 파일명.css 로 css 특정 파일로 디자인을 작성한 후 
+    link로 불러오고자 하는 디자인 파일명을 작성하면
+    파일명에 작성된 디자인이 불러와짐 
+    -->
+    <link rel="stylesheet" href="241028_style.css" />
+  </head>
+  <body>
+    <div>
+      <h1>맛있어 치킨가게 회원가입 완료</h1>
+      <h3>이름 : <span id="name-result"></span></h3>
+      <h3>아이디 : <span id="id-result"></span></h3>
+      <h3>비밀번호 : <span id="pw-result"></span></h3>
+      <h3>이메일 : <span id="email-result"></span></h3>
+      <h3>좋아하는 치킨 : <span id="chicken-result"></span></h3>
+    </div>
+    <script>
+      // 회원가입으로 form 작성한 값을 전달해주는 전달자 생성
+      // 전달자는 B군!
+      // script는 영어에서 대소문자 구문을 하기 때문에
+      // 위에서 name-Result 로 작성했다면 아래에서도 name-Result 작성해야함
+      const B군 = new URL(location.href).searchParams;
+
+      const idResult = document.getElementById("id-result");
+      const pwResult = document.getElementById("pw-result");
+      const emailResult = document.getElementById("email-result");
+      const chickenResult = document.getElementById("chicken-result");
+
+      const nameResult = document.getElementById("name-result");
+
+      nameResult.innerText = B군.get("user-name");
+      /* 쓰임과 의미가 똑같은 코드 */
+
+      document.getElementById("name-result").innerText = B군.get("user-name");
+
+      idResult.innerText = B군.get("user-id");
+      pwResult.innerText = B군.get("user-pw");
+      emailResult.innerText = B군.get("user-email");
+      chickenResult.innerText = B군.get("favorite-chicken");
+    </script>
+  </body>
+</html>

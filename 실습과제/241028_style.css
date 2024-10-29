@@ -1,0 +1,31 @@
+.컨테이너 {
+  width: 50%;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 15px;
+  padding: 20px;
+}
+img {
+  width: 150px;
+  border-radius: 25px;
+}
+input {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+.join-button {
+  background-color: lightsalmon;
+  border: none;
+  padding: 16px;
+  border-radius: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.join-button:hover {
+  background-color: crimson;
+  color: white;
+  /* 마우스를 버튼 위로 올릴 경우 버튼의 몸집을 살짝 키우는 것  */
+  transform: scale(1.08);
+}
