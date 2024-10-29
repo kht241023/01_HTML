@@ -25,15 +25,15 @@ h1 {
 .test-div:active {
   background-color: yellow;
 }
-/*
-    테스트-div 
-    3px 실선 검정색 
-    가로세로 300 px
-    배경색 #ddd 
-    마우스 커서를 손가락 모양으로 변경
-
-    클릭되고 있을 때
-    배경색 black
-    글자색 white
-    글자크기 30px
-*/
+.테스트-div {
+  border: 3px solid black;
+  width: 300px;
+  height: 300px;
+  background-color: #ddd;
+  cursor: pointer;
+}
+.테스트-div:active {
+  background-color: black;
+  color: white;
+  font-size: 30px;
+}
