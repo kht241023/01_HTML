@@ -1,0 +1,39 @@
+/* css 파일은 style 태그 내부에 작성한다 생각하고 코딩을 하면 됨*/
+
+/*h1 태그 글자색 orange */
+h1 {
+  color: orange;
+}
+/*
+<div id="속성값"> </div>
+#속성값 {
+    css스타일속성;
+}
+<div class="ABC"> </div>
+.ABC {
+    CSS스타일속성;
+}
+*/
+.test-div {
+  /* border : 선      실선 solid    선없음 none  */
+  border: 3px solid black;
+  /* width : 가로크기  height : 세로크기 px    % */
+  width: 200px;
+  height: 200px;
+  background-color: lavender;
+}
+.test-div:active {
+  background-color: yellow;
+}
+/*
+    테스트-div 
+    3px 실선 검정색 
+    가로세로 300 px
+    배경색 #ddd 
+    마우스 커서를 손가락 모양으로 변경
+
+    클릭되고 있을 때
+    배경색 black
+    글자색 white
+    글자크기 30px
+*/

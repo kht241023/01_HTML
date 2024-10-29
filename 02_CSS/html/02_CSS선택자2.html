@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS 선택자 2</title>
+    <!--
+    style 태그에 작성한 디자인으로 코드가 길어질 경우
+    외부에 .css 파일을 만들어 연결
+    작성한 css 코드를 다른 HTML 파일과 동시에 스타일 적용할 때 유리하게 사용 가능
+    -->
+    <!--
+    link 태그 : 외부 CSS 파일과 연결하는 태그
+
+    rel(relationship) : 연결하려는 파일이 어떤 종류인지
+                        (현재 HTML 파일과 무슨 관계인지)
+                        stylesheet 작성 필히 해주기
+
+    href : 참조하려는 파일의 위치(주소, 경로) 설정
+
+    ../  :  현재 문서 위치에서 상위 폴더로 이동
+    -->
+    <link rel="stylesheet" href="../css/02_CSS선택자2.css" />
+  </head>
+  <body>
+    <h1>확장파일로 연결한 CSS 선택자</h1>
+    <h3>반응 선택자</h3>
+    <pre>
+        사용자의 움직임에 반응하여 스타일이 변경되게 하는 선택자속성
+
+        선택자:active -> 선택된 요소가 클릭되고 있을 때
+                        image 를 이용해서 프로필 사진 미리보기
+        선택자:hover  -> 선택된 요소 위에 마우스가 올라갔을 때
+                        button 태그에서 많이 사용
+        선택자:focus  -> 선택된 요소에 초점이 맞춰졌을 때 생기는 선
+                        input 태그에서 주로 사용
+    </pre>
+    <div class="test-div">:active</div>
+    <div class="테스트-div">엑티브 사용하기</div>
+  </body>
+</html>

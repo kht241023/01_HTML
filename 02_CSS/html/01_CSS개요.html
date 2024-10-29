@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS 개요</title>
+    <style>
+      /* css (범위) 주석*/
+      /* style 태그 : css를 작성하기 위한 태그 */
+      /* 태그 선택자 */
+      h1 {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS(Cascading Style Sheets)</h1>
+    <pre>
+        Cascading = 작은폭포
+        Style     = 작품의 구성이나 형식
+        Sheets    = 얇은 판
+        css 의 태그를 <style></style> 이라고 표현
+        그런데 왜 태그를 
+        <css></css> 나 
+        <cascadingStyleSheets></cascadingStyleSheets> 로 태그명을
+        작성하지 않는 이유는
+        css이름의 경우 .html 처럼 확장파일명으로 활용됨
+        나중에 스타일 태그들이 길어질 경우는
+        .css 로 파일을만들어서 따로 스타일만 작성할 수 있도록 설정
+        sheets의 경우 엑셀이나 다른곳에서 표기명이 겹치기 때문에
+        중간 글자인 <style></style> 이름을 사용해서 태그를 활용
+      - HTML 언어로 작성한 코드가 실제로 화면에 표시되는 방법을 기술하는 언어
+        <!--
+        예) HTML(영어), JavaScript(중국어), CSS(일본어) 각 다른 언어
+           <style> 태그 안에 작성하는 디자인 css 언어</style> 
+           <script>태그 안에 작성하는 기능   js  언어</script>
+        -->
+      - css 확장파일로 따로 작성해주지 않을 경우
+        헤드 태그 (head 태그) 사이에 style 태그를 작성
+        body나 foot 과 같은 태그에 작성을 해도 되지만
+        style 태그 같은 경우 주로 head 태그 안에 작성 
+    </pre>
+
+    <ul>
+      ** CSS 코드를 작성하는 방법 **
+      <li>
+        head 태그에 style 태그를 작성한 후 내부에 css 코드 작성
+        <br />
+        예) head 태그 style 태그 h1 { color:red;}
+      </li>
+      <br />
+
+      <li>
+        원하는 요소에 직접 style 속성을 이용해서 css 코드 작성
+        <h4 style="color: blue">예) 직접 작성하는 방법</h4>
+      </li>
+      <li>
+        외부에 .css 파일을 생성해서 연결하는 방법
+        <br />
+        head 태그 안에
+        <link href="스타일.css" />
+        .css 로 작성한 스타일과 연결
+      </li>
+    </ul>
+  </body>
+</html>
