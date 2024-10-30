@@ -1,0 +1,46 @@
+/* 단축기
+자동정렬 alt + shift + f
+
+tab으로 띄어쓰기를 진행한 주석의 띄어쓰기 없애기
+들여쓰기 shift + tab 
+*/
+/*id이름명  #이름명 
+  class이름명  .이름명*/
+.banner-img {
+  width: 100%;
+}
+
+.재료 {
+  list-style-type: none;
+}
+/*
+
+class="재료" 태그의 안에 작성된
+li 태그를 꾸며준다는 의미
+*/
+.재료 li {
+  background-color: #ddd;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 3px;
+}
+.재료 li:hover {
+  background-color: aliceblue;
+}
+
+.make li {
+  font-size: 20px;
+  margin: 20px;
+}
+.make li:hover {
+  background-color: coral;
+  color: white;
+  padding: 20px;
+}
+
+.sandwich-info {
+  background-color: white;
+  border: 5px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+}
