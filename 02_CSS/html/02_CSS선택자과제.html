@@ -4,48 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>이미지 hover 효과</title>
-    <style>
-      .image-list {
-        /* ul 태그 꾸미기*/
-        list-style-type: none;
-        display: flex;
-        gap: 20px; /*가로에서 세로로 공간만들기*/
-      }
-
-      .image-list li {
-        width: 150px;
-        height: 150px;
-        background-color: #ddd;
-        border-radius: 10px;
-        text-align: center;
-        font-size: 36px;
-        cursor: pointer;
-      }
-
-      .image-list li:hover {
-        color: white;
-        font-size: 0; /*글자 지우는 트릭*/
-        background-size: cover;
-        background-position: center;
-      }
-
-      .list1:hover {
-        background-image: url(../image/flower1.jpg);
-      }
-      .list2:hover {
-        background-image: url(../image/flower2.jpg);
-      }
-      .list3:hover {
-        background-image: url(../image/flower3.jpg);
-      }
-      .list4:hover {
-        background-image: url(../image/flower4.jpg);
-      }
-      .list5:hover {
-        background-image: url(../image/flower5.jpg);
-      }
-      /*image 폴더 안에 flower1 2 3 4 5 모두 갖다놓기*/
-    </style>
+    <link rel="stylesheet" href="../css/02_CSS선택자과제.css" />
   </head>
   <body>
     <h1>Hover 시 이미지가 보이는 리스트</h1>

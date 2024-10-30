@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>레이아웃 스타일 1</title>
+    <link rel="stylesheet" href="../css/05_레이아웃스타일1.css" />
+  </head>
+  <body>
+    <h1>레이아웃 스타일1</h1>
+
+    <pre>
+        사전적 의미 : 배치, 정리
+        기술적 의미 : 구성요소를 제한된 공간에 효율적으로 배치하는 것
+    </pre>
+
+    <h3>화면 배치(표시, 형식) 지정 : display 속성</h3>
+
+    <pre>
+        요소가 화면에 어떻게 보여질지 형식을 지정하는 속성
+
+        - block : 화면을 수직 분할(행을 나눔, 한 줄 다 차지)
+            +width, height 지정 가능
+        
+        - inline : 화면을 수평 분할(하나의 행의 열을 나눔 == 글자, 문자열 생각)
+
+        - inline-block : inline의 수평 분할 + block의 width, height 지정
+
+        - none : 요소는 존재하나 화면에는 보이지 않게 함
+
+        - flex : 요소의 정렬되는 방향, 요소 간의 간격을 유연하게 처리하는 방식
+        
+        - grid : 격자무늬 형식으로 화면을 쉽게 분할하는 형식
+    </pre>
+
+    <h4>block 형식의 요소를 inline 형식으로 변경</h4>
+
+    <!-- 특정 div 위치에 특별한 디자인을 넣어주길 원한다면
+        class 옆에 띄어쓰기로 클래스명을 한가지 더 작성해주면 됨
+        클래스명 옆에 작성할 수 있는 클래스이름의 개수는 제한없음
+
+        동일한 이름의 클래스명을 여러번 작성해서 디자인을 설정할경우
+        맨 마지막에 작성된 디자인이 적용
+    -->
+    <div class="block 영역1번">1번영역</div>
+    <div class="block 영역2번">2번영역</div>
+    <div class="block 영역3번">3번영역</div>
+    <div class="block 영역4번">4번영역</div>
+    <div class="block 영역5번">5번영역</div>
+  </body>
+</html>

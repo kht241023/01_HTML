@@ -4,44 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSS 선택자 1</title>
-    <style>
-      h1 {
-        /* color : 글자 색상 변경*/
-        color: orange;
-      }
-      strong {
-        /* font-size : 글자 크기 기본 폰트 사이즈 16px로 설정*/
-        font-size: 18px;
-        /* font-family : 글꼴 변경
-           font-family 인 이유 : 첫 번째로 선택한 글꼴이 없을 경우
-                                두 번째로 넣어둔 글꼴을 자동으로 선택
-                                두 번째로 선택한 글꼴이 없을 경우
-                                세 번째로 넣어둔 글꼴을 자동으로 선택 ...
-                                글꼴을 , 로 구분해서 작성
-                                글꼴가족이 종료될 때는 ; 으로 종료
-        */
-        font-family: "Courier New", Courier, monospace;
-        color: steelblue;
-      }
-      code {
-        /* background-color: 배경색 */
-        background-color: lightcoral;
-        /* 
-        display: 배치 방식 웹페이지에서 차지하는 공간과 위치 방식 결정
-                block : 항상 새 줄에서 시작 가로 너비를 모두 차지하려함
-                        width: 100% 처럼 동작
-                        가로폭이 화면 전체를 채우므로 여러 개의 블록요소가
-                        나란히 배치되지 않음 
-                        태그 중에서 div, h1 ~ h6, p 태그는 기본적으로 블록 설정돼있음
-        */
-        display: block;
-        /* 
-        font-weight : 글자 두께 설정 
-            bold : 글자 두께 두껍게 설정    
-        */
-        font-weight: bold;
-      }
-    </style>
+    <link rel="stylesheet" href="../css/02_CSS선택자1.css" />
   </head>
   <body>
     <h1>CSS 선택자 1</h1>
@@ -67,23 +30,7 @@
             }
         </code>
     </pre>
-    <style>
-      /* 
-        id 이름으로 원하는 만큼을 디자인 하고 싶다.
-        #id이름 {
-            css디자인설정;
-        }
-        */
-      #선택1번 {
-        background-color: yellowgreen;
-      }
-      #선택2번 {
-        background-color: orange;
-      }
-      #선택3번 {
-        background-color: lightblue;
-      }
-    </style>
+
     <!-- id를 활용해서 부분적으로 디자인 설정하기 -->
     <ol>
       <li id="선택1번">id 선택자 테스트 1</li>
@@ -107,16 +54,7 @@
                 }
             </code>
     </pre>
-    <style>
-      /* class(.) 선택자*/
-      .테스트1 {
-        background-color: black;
-        color: white;
-      }
-      .테스트2 {
-        background-color: pink;
-      }
-    </style>
+
     <p class="테스트1">class 선택자 테스트</p>
     <p class="테스트2">class 선택자 테스트</p>
     <p class="테스트1">class 선택자 테스트</p>
@@ -127,14 +65,6 @@
     <hr />
     <hr />
     <hr />
-    <style>
-      .test-1 {
-        background-color: orange;
-      }
-      .test-2 {
-        font-size: 30px;
-      }
-    </style>
 
     <ul>
       <li class="test-1">클래스 선택자 테스트1</li>

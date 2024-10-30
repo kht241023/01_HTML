@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS선택자예제4</title>
+  </head>
+  <body>
+    <h1>CSS 선택자 예제 4</h1>
+    <pre>
+        스타일에서 ,와 띄어쓰기 활용하기
+    </pre>
+    <style>
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      /*
+        th, td{
+            border: 1px solid black;
+        }
+        */
+      th,
+      td {
+        border: 1px solid black;
+      }
+
+      .tr-A .td-A {
+        background-color: yellowgreen;
+      }
+
+      .tr-A .td-B {
+        background-color: yellow;
+      }
+      tr .데이터 {
+        background-color: aliceblue;
+      }
+    </style>
+    <table>
+      <tr>
+        <th class="데이터">데이터1</th>
+        <th class="td-A">데이터2</th>
+      </tr>
+      <tr class="tr-A">
+        <td class="td-A">데이터A</td>
+        <td class="td-B">데이터B</td>
+      </tr>
+      <tr>
+        <td class="데이터">데이터(가)</td>
+        <td class="데이터">데이터(나)</td>
+      </tr>
+    </table>
+  </body>
+</html>
