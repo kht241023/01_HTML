@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이모티콘을 활용한 할로윈 홈페이지</title>
+  </head>
+  <body>
+    <style>
+      /*
+        전체적으로 배경 색상을 주고 싶다면 body 태그에 작성하기 
+        body : 모두 적용
+        */
+      body {
+        background-color: #1c1c1c;
+        color: #f5f5f5;
+      }
+      .헤더 {
+        background-color: #333;
+        padding: 20px;
+        text-align: center;
+      }
+      h1 {
+        color: #ffa500;
+        /* 
+        h1 폰트 크기는 고정된 것이 아닌가요?
+        h1 기본 폰트 크기 = 32px 이지만
+        32px 더 크게 만들길 원한다면 32px 이상으로 작성 가능
+        32px 더 작게 만들기도 가능
+        */
+        font-size: 40px;
+      }
+      .메인 {
+        padding: 20px; /*상 우 하 좌 모두 20px 씩 적용*/
+      }
+      .인포메이션 {
+        background-color: #333;
+        color: #f5f5f5;
+        border-radius: 8px;
+        padding: 20px;
+      }
+      /* ul 태그에서 ● 제거
+        li 태그 패딩 상하 10px 좌우 20px 주기
+        li 태그 선택할 때 마다 배경색 #ddd 글자색 black
+    */
+    </style>
+    <div class="container">
+      <div class="헤더">
+        <h1>&#128123; 할로윈 파티에 오신 것을 환영합니다.&#127875;</h1>
+      </div>
+      <div class="메인">
+        <div class="인포메이션">
+          <h2>&#127881; 이벤트 안내 &#127881;</h2>
+          <p>할로윈을 기념하여 특별한 이벤트가 열립니다.!</p>
+          <ul>
+            <li>&#129503; 코스튬 대회</li>
+            <li>&#127874; 사탕 나눠주기</li>
+            <li>&#127926; 음악과 춤</li>
+          </ul>
+        </div>
+        <div class="갤러리"></div>
+      </div>
+    </div>
+  </body>
+</html>
