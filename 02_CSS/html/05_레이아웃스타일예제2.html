@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>div 안 태그 가운데 정렬</title>
+    <style>
+      .T반 {
+        /* T반은 가운데 정렬을 한다. */
+        text-align: center;
+      }
+      .Z반 {
+        /* Z반은 가운데 정렬을 한다. */
+        text-align: center;
+      }
+
+      .T반,
+      .Z반,
+      .Y반 {
+        /* T반과 Z반은 가운데 정렬을 한다. */
+        text-align: center;
+      }
+      /*T반 모든 번호들 글자 크기 키우고 굵게 설정 */
+      /* 
+      T반 아이들과 Y반 아이들에게 모두 글자 크기를 30px해주고
+      글자를 굵게 설정해준다.
+      */
+      .T반 .아이들,
+      .Y반 .아이들 {
+        font-size: 30px;
+        font-weight: bold;
+      }
+
+      .Z반 img {
+        width: 150px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>div 안 span 태그 가운데 정렬</h1>
+    <div class="T반">
+      <!-- 모두 강아지 -->
+      <span class="아이들">1번</span>
+      <span class="아이들">2번</span>
+      <span class="아이들">3번</span>
+      <span class="아이들">4번</span>
+      <span class="아이들">5번</span>
+    </div>
+    <hr />
+    <div class="Y반">
+      <!-- 모두 강아지 -->
+      <span class="아이들">가</span>
+      <span class="아이들">나</span>
+      <span class="아이들">다</span>
+    </div>
+    <div class="Z반">
+      <!-- 모두 코뿔소 -->
+      <img src="../image/flower1.jpg" />
+      <img src="../image/flower2.jpg" />
+      <img src="../image/flower3.jpg" />
+    </div>
+  </body>
+</html>
