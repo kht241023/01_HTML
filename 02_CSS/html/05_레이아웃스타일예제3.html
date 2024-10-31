@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>할로윈 스페셜</title>
+    <style>
+      /*
+        #숫자로시작 : 검은색계열색상
+        #영어로시작 : 흰색계열색상
+        */
+      body {
+        /*
+        background-color: #1a1a1a;
+        color: #f5f5f5;
+        */
+      }
+      .banner {
+        background-image: url("../image/halloween-banner.png");
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 600px;
+        color: #f39c12;
+        font-size: 40px;
+      }
+      h2 {
+        color: orange;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="banner">Happy Halloween!</div>
+      <div class="content">
+        <h2>할로윈 소개</h2>
+        <p>
+          할로윈은 매년 10월 31일에 즐기는 축제입니다. 귀신, 마녀, 좀비 같은
+          분장을 하고 다양한 소품으로 장식된 집에서 친구들과 함게 무서운
+          이야기를 즐기는 날입니다.
+        </p>
+        <style>
+          ul {
+            list-style: none;
+            /* 오후 수업의 주제 */
+            display: flex; /*세로로 있는 태그 가로정렬*/
+            justify-content: space-around;
+            /* margin-right를 전체 너비에서 태그 갯수만큼
+                일정한 간격으로 간격을 유지함 */
+            flex-wrap: wrap; /* 무조건 가로 한 줄에서 태그 안에 작성된 태그들을
+                모두  가로로 정렬 세로로 줄바꿈 하지 않음*/
+          }
+
+          ul li {
+            background-color: #333;
+            padding: 15px;
+            border-radius: 5px;
+            width: 150px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+          }
+        </style>
+        <h2>할로윈 소품</h2>
+        <ul>
+          <li>호박 랜턴</li>
+          <li>해골 모형</li>
+          <li>거미줄 장식</li>
+          <li>유령 인형</li>
+          <li>마녀 모자</li>
+        </ul>
+
+        <h2>무서운 이야기</h2>
+        <style>
+          .story {
+            background-color: #222;
+            padding: 20px;
+            border-radius: 10px;
+          }
+        </style>
+        <div class="story">
+          <p>
+            한 번도 본 적 없는 집에서 이상한 소리가 들리기 시작했어요.
+            걸어다니는 듯한 소리. 그 소리가 점점 가까워지더 결국 문 앞에
+            멈추었어요...
+          </p>
+        </div>
+      </div>
+      <!--content 닫는 주석-->
+    </div>
+    <!--container 닫는 주석-->
+  </body>
+</html>

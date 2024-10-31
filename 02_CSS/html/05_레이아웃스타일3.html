@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃 스타일3</title>
+</head>
+<body>
+    <h1>요소 정렬 스타일(float / clear)</h1>
+
+    <pre>
+        float(뜨다, 띄우다, 뜨는 물건)
+            요소를 띄워서 좌/우로 정렬하는 속성
+            요소 = <태그>작성한 값</태그>
+
+        (float가 지정되지 않은 요소와 지정된 요소가 겹치는 문제가 발생)
+
+        clear : float로 인해 띄워져 있는 상태를 해제하는 속성
+            (요소 겹침 문제 해결)
+    </pre>
+    <hr>
+    <h3>float:left / clear:left</h3>
+    <style>
+        div {
+            border: 1px solid black;
+            /*
+            box-sizing: border-box
+            바깥에 있는 테두리까지 포함해서 정확한 크기 설정
+            */
+            box-sizing: border-box; /* 박스 설정 */
+        }
+        .테스트 {
+            width: 300px;
+            height: 200px;
+            background-color: #ddd;
+        }
+        /* float 지정할경우 block의 성질 해제 (한 줄 차지 X)*/
+        /*float을 해주면 한 줄 모두 차지 -> 한 줄에 있는 한 칸정도 차지 변경*/
+        .f-left {
+            width: 50px;
+            height: 50px;
+            float: left; /*띄워서 왼쪽 정렬*/
+            background-color: pink;
+        }
+
+        .c-left{
+            clear: left;
+        }
+    </style>
+    <div class="테스트">
+        <div class="f-left">1</div>
+        <div class="f-left">2</div>
+        <div class="f-left">3</div>
+        <div class="f-left">4</div>
+        <div>안녕하세요.</div>
+        <div class="c-left">반갑습니다.</div>
+        <!-- 반갑습니다는 clear: left가 적용된 클래스로 오른쪽에 띄워야되는 듯한
+         모든 영향을 제거한다음 새로운 줄에서 시작
+        f-left 모두 클래스의 영향을 받은 것 속성의 영역은
+        
+         -->
+        <div class="f-left">5</div>
+        <div class="f-left">6</div>
+        <div class="f-left">7</div>
+    </div>
+</body>
+</html>

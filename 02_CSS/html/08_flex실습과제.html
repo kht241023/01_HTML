@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex 실습 과제</title>
+  </head>
+  <body>
+    <h1>flex 실습과제</h1>
+
+    <h3>문제 1번</h3>
+    <pre>
+        justify-content:space-between
+        align-items flex-start 사용 
+        각 item 상자를 space-between 을 사용해 양쪽 끝 배치
+        align-items:flex-start 사용해서 상자들이 위쪽으로 정렬되게함
+    </pre>
+
+    <style>
+      .container1 {
+        background-color: lightgreen;
+        padding: 20px;
+        /*플렉스부터 위 코드 적용하기*/
+      }
+    </style>
+    <div class="container1">
+      <div class="item">Box 1</div>
+      <div class="item">Box 2</div>
+      <div class="item">Box 3</div>
+    </div>
+
+    <h3>문제 2: justify-content: center + align-items: center</h3>
+    <div class="container2">
+      <div class="item">Box 1</div>
+      <div class="item">Box 2</div>
+      <div class="item">Box 3</div>
+    </div>
+
+    <h3>문제 3: flex-direction: column + justify-content: center</h3>
+    <div class="container3">
+      <div class="item">Box 1</div>
+      <div class="item">Box 2</div>
+      <div class="item">Box 3</div>
+    </div>
+  </body>
+</html>

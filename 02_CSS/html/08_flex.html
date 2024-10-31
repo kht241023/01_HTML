@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex 레이아웃</title>
+  </head>
+  <body>
+    <h1>Flex 레이아웃</h1>
+    <pre>
+        display : flex;
+        div 안에 작성한 태그들을 유연하게 배치할 수 있는 속성
+        제일 많이 쓰이는 기능
+        수평이나 수직으로 정렬이 가능
+        flex의 경우 div(=가로 한 줄 전체 차지하는 block) 형태를
+        inline 형태로 바꾸는 효과가 있음
+        inline = 가로에서 원하는 만큼만 공간을 차지
+
+        display:flex;와 같이 자주 쓰이는 속성 존재
+        1. 가로로 존재하는 태그의 여백을 설정해주는 방법
+        1-1. justify-content:center;
+            flex 컨테이너 내의 자식 태그를 가로방향으로 가운데 정렬
+        1-2. justify-content:space-around;
+            flex 컨테이너 내에서 자식 태그들 사이에 균등한 여백을 주어 배치
+
+        2.  세로로 존재하는 태그 줄의 여백을 가운데로 설정해주는 방법
+            align-items : center;
+            세로 줄에서 가운데 정렬
+            주로 flex-direction:row; 
+            와 함께 사용할 때 세로 가운데 정렬이 필요할 경우 사용
+            text - align - items
+            └  가로  ┴  세로    ┘ 
+
+        3.  한 줄 에서 있을 수 있는 태그의 너비가 넘어가면 자동으로 줄바꿈이 되도록 설정
+            flex-wrap : wrap;
+            최대한 가로에서 세로로 줄바꿈이되어서 태그가 넘어가지 않도록 설정
+            너비가 넘으면 어쩔 수 없이 줄바꿈이 되는 것
+     </pre
+    >
+    <h3>flex와 inline 차이</h3>
+    <table border="1" style="border-collapse: collapse">
+      <tr>
+        <td>특징</td>
+        <td>요소 배치 방식</td>
+        <td>크기 제어</td>
+        <td>정렬 옵션</td>
+        <td>응용 범위</td>
+      </tr>
+      <tr>
+        <th>inline</th>
+        <td>같은 줄에 나열되며 필요한 공간만 차지</td>
+        <td>높이, 너비 지정 어려움</td>
+        <td>정렬 옵션 제한적</td>
+        <td>텍스트 및 링크 요소 등에 사용</td>
+      </tr>
+      <tr>
+        <th>flex</th>
+        <td>가로, 세로 방향으로 유연하게 배치</td>
+        <td>크기, 여백 쉽게 제어 가능</td>
+        <td>다양한 정렬 옵션 지원</td>
+        <td>전체 레이아웃 설계 주로 사용</td>
+      </tr>
+    </table>
+    <hr />
+    <h4>inline 속성</h4>
+    <pre>높이나 너비 지정 못함</pre>
+    <style>
+      .인라인컨테이너 {
+        display: inline;
+        background-color: lightblue;
+        padding: 10px;
+        width: 300px;
+        height: 300px;
+      }
+      .인라인 {
+        display: inline;
+        background-color: orange;
+        padding: 10px;
+      }
+      .플렉스컨테이너 {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 10px;
+        width: 300px;
+        height: 300px;
+        background-color: aqua;
+      }
+      .플렉스 {
+        background-color: lightcoral;
+        padding: 10px;
+      }
+    </style>
+    <div class="인라인컨테이너">
+      <div class="인라인">ITEM 1</div>
+      <div class="인라인">ITEM 2</div>
+      <div class="인라인">ITEM 3</div>
+    </div>
+    <div class="플렉스컨테이너">
+      <div class="플렉스">ITEM A</div>
+      <div class="플렉스">ITEM B</div>
+      <div class="플렉스">ITEM C</div>
+    </div>
+
+    <hr />
+
+    <h3>text-align 과 justify-content의 차이</h3>
+    <style>
+      .컨테이너1 {
+        text-align: center;
+        background-color: lightgray;
+        padding: 20px;
+      }
+    </style>
+    <div class="컨테이너1">
+      <span>안녕! 클릭하기 → </span>
+      <button>클릭합시다.</button>
+    </div>
+    <style>
+      .컨테이너2 {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .아이템1 {
+        width: 100px;
+        height: 100px;
+        background-color: skyblue;
+      }
+      .아이템2 {
+        width: 100px;
+        height: 100px;
+        background-color: pink;
+        display: flex;
+        justify-content: center;
+      }
+    </style>
+    <div class="컨테이너2">
+      <!-- Item 1과 Item 2가 가로 한 줄에서 가운데 정렬 
+        div 의 경우 가로의 길이를 주면 text-align : center
+        적용이 안됨 
+        가로의 길이를 주게 될 경우
+        div가 가진 가로의 길이에서 최선을 다해 가운데정렬을 했지만
+        눈으로 보이지 않는 것일 쁜
+        -->
+      <div class="아이템1">Item 1</div>
+      <div class="아이템2">Item 2</div>
+    </div>
+  </body>
+</html>
