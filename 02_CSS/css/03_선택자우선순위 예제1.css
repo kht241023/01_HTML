@@ -1,0 +1,28 @@
+/*
+        속성에서 배경색(background-color) 만 클래스와 아이디와 태그에서
+        배경색 설정을 동시 사용
+        동시에 사용하는 속성이 아니면 모두 누적
+        */
+/* 3순위 : 아이디 선택자 */
+#아이디속성 {
+  color: white;
+  /* 다른 곳에서 사용한 적이 없는 스타일 속성이기 때문에 적용*/
+  /*속성이름 안겹치면 모두 누적*/
+  background-color: black;
+}
+/* 4순위 : 클래스 선택자 */
+.클래스속성 {
+  font-size: 30px;
+  background-color: green;
+}
+/* 5순위 : 태그 선택자 */
+div {
+  width: 200px;
+  height: 200px;
+  background-color: red !important; /* 1순위 !important */
+}
+/*
+      !important : 후임이나 신규개발자 고의성이 다분 등
+      스타일의 속성이 의도한 바와 다르게 설정되는 것을 방지하기 위해
+      사용되는 값
+      */

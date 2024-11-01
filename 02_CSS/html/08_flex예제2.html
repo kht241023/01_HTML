@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>justify-content 활용해보기</title>
+    <style>
+      .container {
+        display: flex;
+        width: 80%;
+        padding: 10px;
+        border: 1px solid #ccc;
+      }
+
+      .box {
+        width: 50px;
+        height: 50px;
+        background-color: lightblue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>justify-content 활용해보기</h1>
+    <p>주의사항 : justify-content 스타일은 우선순위 2 스타일로 적용</p>
+    <hr />
+    <hr />
+
+    <h2>모든 요소가 컨테이너의 왼쪽으로 정렬하기</h2>
+    <div class="container">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+    </div>
+    <hr />
+    <h2>모든 요소가 컨테이너의 오른쪽으로 정렬하기</h2>
+    <div class="container">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+    </div>
+    <hr />
+    <h2>모든 요소가 컨테이너의 중앙에 정렬</h2>
+    <div class="container">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+    </div>
+    <hr />
+    <h2>각 요소 사이에 동일한 간격이 있고 양쪽 끝에 반 간격 제공</h2>
+    <div class="container">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+    </div>
+    <hr />
+    <h2>모든 요소 사이와 양쪽 끝에 동일한 간격 제공</h2>
+    <div class="container">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+    </div>
+    <hr />
+    <h2>첫 번재 요소는 왼쪽 끝에, 마지막 요소는 오른쪽 끝에 정렬</h2>
+    <div class="container">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+    </div>
+  </body>
+</html>

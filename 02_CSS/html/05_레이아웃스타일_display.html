@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display 속성</title>
+</head>
+<body>
+    <h1>display 속성</h1>
+    <pre>
+        display 속성 HTML 요소의 배치 방식을 설정하는 중요한 css 속성
+        요소 : <태그>내용</태그> element
+        display 주요 값으로
+            [block, inline, inline-block, flex, grid, inline-flex]
+        모든 태그에는 display가 각 속성에 맞게 기본설정이 되어있음
+        display : block = div, h1~h6, p 등 대표적으로 block 설정으로 존재
+                    예 ) h1 태그를 만들 때 : display:block 주고 
+                                            font-weight:bold 주고 
+                                            font-size:32px
+                                            color:black
+                                            기본 설정으로 만들자!
+                        위 h1 태그처럼 모든 태그에는 각 css가 기본으로 설정이 되어있음
+        display : inline = span, a, strong 등 대표적으로 inline 설정으로 존재
+                    예 ) span 태그를 만들 때 : display:inline 주고
+                                              font-size:16px 주고
+                                              color:black 
+                                              기본 설정해서 개발자들이 span 태그를 활용할 수 있게 하자!
+        기본적으로 각 태그에는 기본스타일이 적용되어 있는데
+        기본스타일의 틀을 변경하길 원할 경우 css 를 이용해서 디자인 변화를 주는 것
+        display : inline-block = inline  처럼 한 줄에 표시됨
+                                 img, button 태그가 inline-block 설정
+    </pre>
+
+    <h3>display : flex</h3>
+    <pre>
+        flex 요소는 내부 항목들이 수평 또는 수직으로 유연하게 정렬
+        inline과 flex 차이
+        inline = 가로 세로 조정 X
+         flex  = 가로 세로 조정 O
+    </pre>
+    <div style="display: flex;">
+        <div style="background-color: lightpink; padding: 20px;">
+            Flex Item 1
+        </div>
+        <div style="background-color: lightyellow; padding: 20px;">
+            Flex Item 2
+        </div>
+        <div style="background-color: lightblue; padding: 20px;">
+            Flex Item 3
+        </div>
+    </div>
+
+    <h3>display : grid</h3>
+    <pre>행과 열로 내부 항목 정렬
+        주로 이미지나 웹툰처럼 틀과 형식으로 규칙적인 정렬이 필요할 때
+        많이 사용
+
+        grid-template-columns: 1fr 1fr; 
+            fr : fraction(한국어 : 부분  일부라는 영어)
+             그리드 내에서 사용 가능한 공간을 비율로 나누는 단위
+            1fr : 그리드의 사용 가능한 공간을 같은 비율로 나눠서 차지하라는 의미
+            1fr 1fr : 두 개의 열이 동일하게 공간을 나누어 차지
+
+            1fr 2fr : 첫 번째 열은 가로 전체 공간의 1/3을 차지
+                      두 번째 열은 가로 전체 공간의 2/3을 차지
+
+        gap:10px
+            그리드 셀 사이에 10px 간격을 추가
+            그리드 안에서 자동으로 10px 간격을 주고 자동 배치
+    </pre>
+    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap:10px"> 
+        <div style="background-color: lightcoral; padding: 20px;">
+            Grid Item 1
+        </div>
+        <div style="background-color: lightblue; padding: 20px;">
+            Grid Item 2
+        </div>
+        <div style="background-color: lightgreen; padding: 20px;">
+            Grid Item 3
+        </div>
+        <div style="background-color: lightyellow; padding: 20px;">
+            Grid Item 4
+        </div>
+
+    </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 30px;">
+            <div style="background-color: lightgreen; padding: 20px;">
+                Grid Item 1
+            </div>
+            <div style="background-color: lightblue; padding: 20px;">
+                Grid Item 2
+            </div>
+            <div style="background-color: lightpink; padding: 20px;">
+                Grid Item 3
+            </div>
+        </div>
+
+
+
+
+
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    
+
+
+
+
+
+
+</body>
+</html>

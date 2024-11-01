@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS 선택자 우선순위</title>
+  </head>
+  <body>
+    <h1>CSS 스타일 선택자 우선순위</h1>
+    <pre>
+        기본적으로 css 속성은 style 태그 또는 css 파일에
+        작성된 순서(위에서부터 아래로)대로 해석이 진행되지만
+
+        같은 요소에 여러 css 속성이 설정되는 경우 우선순위에 따라 적용
+
+        * 알아둬야 할 것
+        1) 동일한 우선 순위로 css 속성이 설정된 경우
+            ->제일 마지막에 작성된 css 속성이 반영
+        2) 여러 선택자를 이용해서 같은 요소를 선택하더라도
+            지정되는 css 속성이 다르면 모두 반영됨
+        3) 태그와 style이 가까이 위치할 수록 우선순위가 적용
+
+        4) 스타일.css 파일과 <style></style> 태그 안에 작성한 css
+            는 동일한 우선순위를 가지고 있으나
+            가장 마지막에 작성한 것에 따라 마지막에 작성된 스타일 적용
+
+            예1) 
+                <link rel="stylesheet" href="스타일.css">
+                <style>
+                    /*css 설정값 작성*/
+                </style>
+
+                마지막에 작성한 style 태그가 적용
+            예2) 
+                <style>
+                    /*css 설정값 작성*/
+                </style>
+                <link rel="stylesheet" href="스타일.css">
+                마지막에 작성한 link 태그가 적용
+
+        1순위 : css속성 : 속성값 !important;
+            -> 디자인을 작성하는 처음부터 애초에 변경을 하지 못하게 잠금설정
+
+        2순위 : inline-style 속성
+                <p style="font-size: 20px;" >인라인 스타일 속성</p>
+            -> 태그 옆에 직접적으로 스타일을 작성한 것은 엄청 중요한 이유가 있을 것이야!
+        
+        3순위 : #아이디 속성명
+            -> 특수하게 특정아이디에게 스타일을 주는 이유가 있겠지
+
+        4순위 : .클래스 속성명
+            -> 주로 반복적인 디자인 적용 대표적으로 css 가장 많이 쓰는 방법
+        
+        5순위 : 태그이름
+        <style>
+            h3 { /* 5순위 */
+                background-color: red;
+            }
+        </style>
+        <h3>안녕</h3>
+
+    </pre>
+  </body>
+</html>
