@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display 플렉스 활용방안2</title>
+    <style>
+        .container {
+            display: flex;
+            height: 150px;
+            background-color: #e0f7fa;
+            padding: 10px;
+        }
+        .container div{
+            padding: 20px;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>display flex - align-items</h1>
+    <h3>align-items</h3>
+    <pre>
+        요소 : <태그>내용물</태그>
+        수직 방향에서 요소들을 어떻게 정렬할지 결정
+        부모 컨테이너의 height(세로)가 지정되어 있을 때 효과가 직관적으로 보임
+
+        align-items:
+            flex-start : 요소들을   위쪽으로 정렬
+            flex-end   : 요소들을 아래쪽으로 정렬
+            center     : 요소들을 가운데  로 정렬  
+            baseline   : 요소들을 텍스트 기준선이 동일한 선에 맞춰짐
+            stretch    : 요소들이 컨테이너의 높이에 맞춰 늘어나고 정렬됨 (기본값)
+    </pre>
+
+    <hr>
+    <h3>align-items:flex-start</h3>
+    <div class="container" style="align-items: flex-start;">
+        <div style="background-color: lightcoral;">item1</div>
+        <div style="background-color: lightblue;">item2</div>
+        <div style="background-color: lightgreen;">item3</div>
+    </div>
+
+    <hr>
+    <h3>align-items:flex-end</h3>
+    <div class="container" style="align-items: flex-end;">
+        <div style="background-color: lightcoral;">item1</div>
+        <div style="background-color: lightblue;">item2</div>
+        <div style="background-color: lightgreen;">item3</div>
+    </div>
+
+    <hr>
+    <h3>align-items:center</h3>
+    <div class="container" style="align-items: center;">
+        <div style="background-color: lightcoral;">item1</div>
+        <div style="background-color: lightblue;">item2</div>
+        <div style="background-color: lightgreen;">item3</div>
+    </div>
+
+    <hr>
+    <h3>align-items:base-line</h3>
+    <div class="container" style="align-items: baseline;">
+        <div style="background-color: lightcoral; font-size: 24px;">item1</div>
+        <div style="background-color: lightblue; font-size: 16px;">item2</div>
+        <div style="background-color: lightgreen; font-size: 32px;">item3</div>
+        <div style="background-color: lightgreen; font-size: 32px;">item3</div>
+        <div style="background-color: lightyellow; font-size: 80px;">item3</div>
+    </div>
+
+
+    <hr>
+    <h3>align-items:stretch (기본값)</h3>
+    <div class="container" style="align-items: stretch; height: 300px;">
+        <div style="background-color: lightcoral; font-size: 24px;">item1</div>
+        <div style="background-color: lightblue; font-size: 16px;">item2</div>
+        <div style="background-color: lightgreen; font-size: 32px;">item3</div>
+        <div style="background-color: lightgreen; font-size: 32px;">item3</div>
+        <div style="background-color: lightyellow; font-size: 80px;">item3</div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

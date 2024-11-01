@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>align-items 예제 1</title>
+    <style>
+      .container {
+        display: flex;
+        height: 300px;
+        background-color: #fff;
+        border: 2px solid orange;
+      }
+
+      .container div {
+        background-color: lightyellow;
+        height: 100px;
+        padding: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>align-items 실습문제</h1>
+
+    <h3>위쪽 정렬</h3>
+    <div class="container" style="align-items: flex-start">
+      <div>가</div>
+      <div>나</div>
+      <div>다</div>
+    </div>
+    <hr />
+    <h3>아래쪽 정렬</h3>
+    <div class="container" style="align-items: flex-end">
+      <div>가</div>
+      <div>나</div>
+      <div>다</div>
+    </div>
+    <hr />
+    <h3>가운데 정렬</h3>
+    <div class="container" style="align-items: center">
+      <div>가</div>
+      <div>나</div>
+      <div>다</div>
+    </div>
+    <hr />
+    <h3>기본 정렬</h3>
+    <div class="container" style="align-items: stretch">
+      <div>가</div>
+      <div>나</div>
+      <div>다</div>
+    </div>
+    <hr />
+  </body>
+</html>

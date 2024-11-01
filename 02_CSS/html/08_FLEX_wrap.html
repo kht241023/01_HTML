@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex wrap</title>
+    <style>
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        /*
+            justify-content:space-속성 여백이 자동 설정
+            gap : 지정해서 여백을 나란히 동일하게 제공하고자 하는 
+                  값을 설정할 수 있는 여백
+            */
+        gap: 10px;
+        padding: 10px;
+        background-color: #ddd;
+      }
+      .container div {
+        padding: 20px;
+        width: 150px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>flex flex-wrap 활용하기</h1>
+    <pre>
+        display : flex 가로로 정렬  기존에있던 display 변경했기 때문에 가능
+
+        flex-wrap : 컨테이너 안에 있는 여러개의 아이템이 작은 화면에서도 
+            여러줄에 걸쳐 배치되도록 설정
+        반응형 디자인
+        반응형이란 ? 화면에서 화면의 가로 크기에 따라 사용자에게 거부감없는 디자인을
+                    제공하는 것을 반응형
+                    본체 모니터 800 ~ 1400
+                    태블릿 700px ~500px
+                    핸드폰 400 ~ 300px
+    </pre>
+    <h3>display:flex 와 flex-wrap:wrap 활용하기</h3>
+    <div class="container">
+      <div style="background-color: lightcoral">상의</div>
+      <div style="background-color: lightblue">하의</div>
+      <div style="background-color: lightgreen">악세사리</div>
+      <div style="background-color: lightpink">신발</div>
+      <div style="background-color: lightyellow">고객센터</div>
+    </div>
+    <style>
+      .container2 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        padding: 20px;
+        background-color: #ddd;
+      }
+      .container2 div {
+        padding: 20px;
+        width: 100px;
+        text-align: center;
+        border-radius: 5px;
+      }
+    </style>
+    <h3>display:flex와 flex-wrap:wrap, justify-content 활용하기</h3>
+    <div class="container2">
+      <div style="background-color: lightcoral">상의</div>
+      <div style="background-color: lightblue">하의</div>
+      <div style="background-color: lightgreen">악세사리</div>
+      <div style="background-color: lightpink">신발</div>
+      <div style="background-color: lightyellow">고객센터</div>
+    </div>
+
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+  </body>
+</html>

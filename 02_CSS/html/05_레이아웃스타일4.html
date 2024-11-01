@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>레이아웃 스타일 4</title>
+  </head>
+  <body>
+    <h1>position</h1>
+    <pre>
+        요소 배치(위치) 관련 스타일
+        위치를 지정하는 속성
+
+        - position:relative (상대적인)
+            지정된 요소 내부에 다른 요소가 
+            상대적인 위치를 지정할 수 있도록
+            기준이 되게 만드는 속성
+
+        - position:absolute (절대적인)
+            기본 요소 배치 순서를 무시하고 
+            지정된 절대 위치에 요소를 배치함
+
+            z-index : 정수
+            가장 우선으로 보여지는 디자인의 순서를 지정
+            숫자가 적을 수록 겹쳐졌을 때 후순위
+            숫자가 클수록 먼저보여짐
+
+        - position:fixed (고정된)
+            항상 고정된 위치에 요소를 배치함
+            (화면이 움직이든 말든 항상 같은 위치)
+
+        - position:sticky
+             원래 요소가 보여지는 화면이라면 position X
+             요소가 보여지는 화면을 벗어나면 fixed (고정)
+
+        - z-index : 단독으로 많이 사용하기도 함
+            relative, absolute, fixed, sticky 같이 사용됨
+            기본숫자 : 0
+            -2147483648  :32bit 기준으로 최소값
+            -1 : 다른 요소 아래에 쌓임
+             0 : 기본 레벨
+             1 : 다른 요소 위에 쌓임
+             10: 더 높은 우선 순위를 가지며 더 많은 요소 위에 보여짐
+             2147483647 : 32bit 기준으로 최대값
+    </pre>
+
+    <h3>position : fixed</h3>
+
+    <style>
+      .container {
+        position: relative;
+        width: 300px;
+        height: 300px;
+        border: 1px solid #333;
+      }
+
+      .box1,
+      .box2,
+      .box3 {
+        position: absolute;
+        width: 150px;
+        height: 150px;
+      }
+      .box1 {
+        background-color: red;
+        z-index: 1;
+        top: 50px;
+        left: 50px;
+      }
+      .box2 {
+        background-color: green;
+        z-index: 2;
+        top: 100px;
+        left: 100px;
+      }
+      .box3 {
+        background-color: blue;
+        z-index: 3;
+        top: 150px;
+        left: 150px;
+      }
+    </style>
+    <div class="container">
+      <div class="box1">Box</div>
+      <div class="box2">Box</div>
+      <div class="box3">Box</div>
+    </div>
+
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+  </body>
+</html>
