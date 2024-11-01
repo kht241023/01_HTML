@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>justify-content 활용해서 이미지 정렬</title>
+    <style>
+      .container {
+        display: flex;
+        width: 90%;
+        margin: 20px auto;
+        border: 1px solid #ccc;
+        padding: 10px;
+      }
+      .div-img {
+        width: 100px;
+        height: 100px;
+        background-color: lightblue;
+        border: 2px solid #333;
+      }
+      .div-img:hover {
+        /*display: none;*/
+        visibility: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>justify-content 를 이용해서 이미지 정렬</h1>
+    <div class="container" style="justify-content: space-between">
+      <img class="div-img" src="../image/flower2.jpg" />
+      <img class="div-img" src="../image/flower3.jpg" />
+      <img class="div-img" src="../image/flower4.jpg" />
+    </div>
+    <div class="container" style="justify-content: space-around">
+      <img class="div-img" src="../image/pumpkin.jpg" />
+      <img class="div-img" src="../image/skull.jpg" />
+      <img class="div-img" src="../image/web.jpg" />
+    </div>
+    <div class="container" style="justify-content: space-evenly">
+      <img class="div-img" src="../image/flower1.jpg" />
+      <img class="div-img" src="../image/ghost.jpg" />
+      <img class="div-img" src="../image/flower5.jpg" />
+    </div>
+  </body>
+</html>
