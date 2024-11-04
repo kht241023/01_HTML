@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>태그 속성 선택자</title>
+  </head>
+  <body>
+    <h1>태그 속성 선택자</h1>
+    <h3>label 태그</h3>
+    <pre>
+        속성 선택자 css 문법
+        for 속성의 값이 input 요소와 연결하는 역할
+        input에서 id값과 for와 속성값이 같으면 연결
+        또는
+        label안에 input 태그를 작성할 수 있음
+        label안에 input 태그를 작성하면 for는 생략 가능
+    </pre>
+    <h4>label 예제 작성</h4>
+    <label for="id속성명">사진 선택하기</label>
+    <input type="file" id="id속성명" />
+    <p>
+      파일 선택 버튼을 누르지 않고 [사진선택하기] 를 선택하면
+      <br />
+      파일 선택하는 창이 연동돼서 열리게 됨
+      <br />
+      주로 input type="file" 속성은 display:hidden 을 이용해서 화면에서 숨김
+    </p>
+    <br />
+    <label
+      >사진 선택하기
+      <input type="file" id="id사진선택" />
+    </label>
+    <p>
+      label 태그 안에 input 태그를 작성해주면<br />
+      for 속성을 작성하지 않아도 label 안에 연결된 input과 연결됨
+    </p>
+
+    <h2>태그에서 특정 속성을 선택하여 디자인하기</h2>
+    <h3>input 태그</h3>
+    <pre>
+        input[type=""] 형식의 선택자는 특정 type 속성값을 가진
+        input 요소를 선택하는데 도움됨
+
+        예를 들어
+        input[type="text"] type이 text인 입력 필드만 선택돼서 꾸며짐
+    </pre>
+    <h4>input 예제작성</h4>
+    <style>
+      input[type="password"] {
+        width: 50%;
+        padding: 20px;
+      }
+
+      input[type="password"],
+      input[type="text"] /* ,  를 사용해서 다수 선택 가능 */ {
+        width: 50%;
+        padding: 20px;
+      }
+    </style>
+    <label>비밀번호 : </label>
+    <input type="password" />
+  </body>
+</html>
