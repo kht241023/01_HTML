@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex box container</title>
+    <style>
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 1000px;
+        background-color: f0f0f0;
+      }
+      .container div {
+        width: 100px;
+        height: 100px;
+      }
+      /*  
+      .container div와 .box는 동일한 css 표기
+      class 속성명을 두가지이상 지정해서 작성하길 원한다면
+      <태그 class="속성명1 속성명2 속성명 3 ...">요소값</태그>
+      위와 같이 띄어쓰기를 작성해서 여러가지 속성을 적용할 수 있음 
+      */
+      .box {
+        width: 100px;
+        height: 100px;
+      }
+
+      .box1 {
+        background-color: lightblue !important;
+      }
+      .box2 {
+        background-color: lightcoral !important;
+      }
+      .box3 {
+        background-color: lightyellow !important; /* css 1순위 적용*/
+      }
+    </style>
+  </head>
+  <body>
+    <h1>flex box container</h1>
+    <div class="container">
+      <div class="box box1">1</div>
+      <div class="box box2">2</div>
+      <div class="box box3">3</div>
+    </div>
+  </body>
+</html>

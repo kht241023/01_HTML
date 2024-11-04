@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS선택자4</title>
+  </head>
+  <body>
+    <h1>부모 자식 선택자</h1>
+    <h2>일반 구조(위치)선택자</h2>
+    <pre>
+        형제 관계가 있는 요소 중에서 특정 요소만을 선택하는 선택자
+        * 중요 * -> 위치를 기준으로 구분
+
+        A:first-child -> 형제들 중 첫 번째가 A가 맞다면 선택
+        A:last-child -> 형제들 중  마지막이 A가 맞다면 선택
+        A:nth-child(n = 숫자값) -> 형제들 중  n번째가 A가 맞다면 선택
+        A:nth-last-child -> 형제들 중  뒤에서 부터 n번째가 A가 맞다면 선택
+    </pre>
+    <style>
+      /****** 일반 구조 선택자 ******/
+      /* A:first-child */
+      /* 형제들 중 첫 번째가 A가 맞다면 선택 */
+      .test1 > p:first-child {
+        background-color: red;
+        color: white;
+      }
+      /* div class="test1 에서 
+           마지막이 p 태그가 아니라 
+           pre 태그이기 때문에 적용 x  */
+      .test1 > p:last-child {
+        background-color: green;
+      }
+      /*태그명:last-child*/
+      /* 형제들 중 마지막이 작성한 태그명이 맞다면 선택 */
+      /* test1 태그 안에 마지막으로 작성된 태그는 pre 태그이기 때문에 아래와 같이 사용*/
+      .test1 > pre:last-child {
+        background-color: green;
+      }
+      /* 수열 : 일정한 규칙에 따라 순서적으로 나열된 숫자 
+            숫자나열 - 줄임말 수열
+        */
+      /*태그명:nth-child(숫자 또는 수열)*/
+      .test1 > p:nth-child(3) {
+        /* () 안에 원하는 위치의 수를 작성*/
+        background-color: yellow;
+      }
+
+      .test1 > p:nth-child(2),
+      .test1 > p:nth-child(4),
+      .test1 > pre:nth-child(6) {
+        padding: 20px;
+        border-radius: 10px;
+        background-color: lightblue;
+      }
+      .test1 > p:nth-child(1),
+      .test1 > p:nth-child(3),
+      .test1 > p:nth-child(5) {
+        padding: 10px;
+        border-radius: 5px;
+        background-color: lightpink;
+      }
+
+      /*짝수 번째가 p 태그인 경우 선택*/
+      /*pre는 p태그가 아니기 때문에 안됨!!*/
+      .test1 > p:nth-child(2n) {
+        font-weight: bold;
+        background-color: lightsalmon;
+      }
+      /*홀수 번째가 p 태그인 경우 선택*/
+      .test1 > p:nth-child(2n-1) {
+        background-color: yellow;
+        padding: 10px;
+      }
+      /*
+        만약에 동일한 규칙의 스타일이 추가될경우
+        자동으로 css를 적용해주기위해 설정해주는 방법
+        회원가입이나 특정 값들을 작성할 때
+        구분 스타일을 주기위해 사용
+        */
+    </style>
+    <div class="test1">
+      <p>테스트1</p>
+      <p>테스트2</p>
+      <p>테스트3</p>
+      <p>테스트4</p>
+      <p>테스트5</p>
+      <pre>테스트6 (pre)</pre>
+      <p>pre 밑에오는 테스트 7 p 태그</p>
+      <p>pre 밑에오는 테스트 8 p 태그</p>
+      <p>pre 밑에오는 테스트 9 p 태그</p>
+      <p>pre 밑에오는 테스트 10 p 태그</p>
+    </div>
+  </body>
+</html>

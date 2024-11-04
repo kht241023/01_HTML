@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>배너 및 네비게이션</title>
+    <style>
+      /*
+      보통 웹 사이트를 만들 때
+      body에 혹시모를 여백이 있을 수 있으니
+      margin:0; 주고 시작
+      div로 설정했을 때 생기는 여백 없애기를 해주는 것
+      */
+      body {
+        margin: 0;
+      }
+      /* 배너 스타일 */
+      .banner {
+        background-color: yellowgreen;
+        color: white;
+        padding: 60px 0;
+        text-align: center;
+        font-size: 40px;
+        font-weight: bold;
+      }
+
+      /* 네비게이션 스타일 */
+      .nav {
+        /*  list-style-type: none;
+            ul 기본적으로 위 아래에 공간 여백이 존재
+            카테고리나 네비게이션을 설정해줄 때
+            기존에 ul 태그에 작성된 공간이나 여백 없애줌
+            margin :0;  padding: 0; 덮어씌워 없애줌
+        */
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+        background-color: #333;
+      }
+      .nav a {
+        /*a 태그는 inline이기 때문에 
+        패딩이 동작을 하지 않음
+        그래서 display:block 설정으로 덮어쓰기 후
+        가로 세로나 패딩 설정이 가능
+        */
+        display: block;
+        color: white;
+        padding: 14px 20px;
+        text-decoration: none; /*밑줄제거*/
+        font-weight: bold;
+      }
+      .nav a:hover {
+        background-color: #555;
+      }
+      /*블로그 섹션 스타일 */
+      .blog {
+        width: 800px;
+        margin: 50px auto;
+        padding: 20px;
+        /*  box-shadow: 0px 오른쪽으로 얼만큼 갈 것인가 
+            box-shadow:     4px 아래쪽으로 얼만큼 갈 것인가
+            box-shadow:          12px 얼마나 뿌옇게 만들 것인가
+            box-shadow:               rgba(0, 0, 0, 0.1)  불투명도 설정
+                                      rgba(0, 0, 0) = 검정색
+                                      rgba( ,  ,  , 0.1~1.0) 1에 가까울수록 짙어짐 
+        */
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      .post {
+        background-color: #f9f9f9;
+        margin-bottom: 20px;
+        padding: 20px;
+        border-radius: 8px;
+      }
+
+      .h2,
+      h3 {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+      .h2 {
+        color: yellowgreen;
+      }
+      .h3 {
+        color: lightgreen;
+      }
+
+      /*
+
+        쿠키 이모지 에 span 태그로 감싸서
+        폰트 사이즈 20px로 변경 이모지만
+      */
+
+      .post h2 span {
+        font-size: 50px;
+        margin-right: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 배너 -->
+    <div class="banner">웹 사이트에 오신 것을 환영합니다.</div>
+    <!-- 네비게이션 -->
+    <ul class="nav">
+      <li><a href="#">HOME</a></li>
+      <li><a href="#">소개</a></li>
+      <li><a href="#">서비스</a></li>
+      <li><a href="#">연락하기</a></li>
+    </ul>
+    <!-- 
+     log = (컴퓨터) 기록 일지에 어떤 문제가 생겼는지 무슨 일이 있었는지 기록
+    blog = (we)b   log
+    vlog = v(ideo) log 
+    -->
+    <!-- blog 섹션-->
+
+    <div class="blog">
+      <div class="post">
+        <h2>첫 번째 블로그 포스트</h2>
+        <p>안녕하세요. 블로그를 오픈했습니다. 많은 관심 부탁드려요.</p>
+      </div>
+
+      <div class="post">
+        <h2><span>&#x1F36A;</span>쿠기 만들기 포스팅!</h2>
+        <p>밀가루에 우유와 계란을 넣고 반죽을 한다.</p>
+        <p>설탕과 초콜렛칩을 넣는다.</p>
+        <p>오븐에서 20분 구워준다.</p>
+      </div>
+
+      <div class="post">
+        <h3>개발 공부하기 : 코딩 HTML 편</h3>
+        <p>Doctype 은 document type의 줄임말이다.</p>
+        <p>문서 타입의 html로 html5 설정을 해주기위해 ! 를 넣는다.</p>
+      </div>
+    </div>
+  </body>
+</html>

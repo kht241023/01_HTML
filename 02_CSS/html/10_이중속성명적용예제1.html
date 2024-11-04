@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이중 속성명으로 css 적용하기</title>
+    <style>
+      /* 공통 스타일 */
+      .박스 {
+        color: red;
+        padding: 10px;
+        border-radius: 5px;
+      }
+      .box1 {
+        background-color: #4caf50;
+        color: white;
+      }
+      .box2 {
+        background-color: #f0f0f0;
+        color: #333;
+        border: 2px solid #333;
+      }
+
+      .글자 {
+        font-size: 20px;
+        font-weight: bold;
+      }
+      .highlight {
+        background-color: beige;
+        color: brown;
+      }
+      .shadow {
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>여러 개의 클래스를 사용하여 다양한 스타일 적용하기</h1>
+
+    <div class="속성명1 속성명2 속성명3 ...">
+      다양한 클래스명 스타일 적용하기
+    </div>
+    <pre>
+        다양한 클래스명을 클래스 내부에 작성할 때는 
+        띄어쓰기로 작성을 진행한다.
+        속성명1 = 다양한 요소에 공통으로 작성할 스타일
+        속성명2 = 공통으로 작성할 스타일
+        속성명3 = 개별적으로 적용할 스타일
+
+        !important로 작성한 스타일이 앞에
+        작성한 속성명에 작성되있지 않는다면  
+        뒤에 작성한 스타일이 덮어쓰기 되어 적용
+
+        영어 숫자 관계없이 작성한순서가 기준
+    </pre>
+    <div class="박스 box1">배경색과 글자 색상</div>
+    <div class="박스 box2">배경색과 테두리</div>
+    <div class="박스 글자 highlight">강조된 텍스트와 배경색</div>
+    <div class="박스 글자 shadow">텍스트 크기와 그림자</div>
+    <div class="box1 박스 글자 shadow">텍스트 크기와 배경색 그리고 그림자</div>
+  </body>
+</html>

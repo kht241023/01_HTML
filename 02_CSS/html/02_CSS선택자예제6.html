@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ul li 스타일 적용하기</title>
+    <style>
+      li:nth-child(2n-1) {
+        background-color: #f9f9f9;
+      }
+      li:nth-child(2n) {
+        background-color: #e0e0e0;
+      }
+      /* 3의 배수에 색상 적용하는 방법 */
+      li:nth-child(3n) {
+        color: red;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>ul li 스타일 적용하기</h1>
+    <ul>
+      <li>항목 1</li>
+      <li>항목 2</li>
+      <li>항목 3</li>
+      <li>항목 4</li>
+    </ul>
+    <hr />
+    <style>
+      /*첫 번째 부터 세 번째 문단에만 스타일 적용하는 방법*/
+      /*  n = 0     +n = 이후  -n = 이전  */
+
+      p:nth-child(n + 1):nth-child(-n + 3) {
+        font-size: 30px;
+        color: red;
+      }
+      /*네 번째 이후 문단에만 스타일 적용하는 방법*/
+      p:nth-child(n + 4) {
+        color: blue;
+      }
+
+      /*선착순 3명 이후
+        4번째 부터는 표기를 다르게 설정하길 원함
+        */
+    </style>
+    <h1>선착순 3명에게는 경품을 ~!</h1>
+    <div>
+      <p>김말숙</p>
+      <p>홍길동</p>
+
+      <p>박길자</p>
+      <p>오명식</p>
+      <p>안정태</p>
+      <p>박규숙</p>
+
+      <p>오영실</p>
+      <p>이길명</p>
+      <p>하짐자</p>
+      <p>고명진</p>
+    </div>
+  </body>
+</html>
