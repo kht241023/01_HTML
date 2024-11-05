@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>납품정보결과</title>
+  </head>
+  <body>
+    <h1>결과 확인하기</h1>
+
+    <h3>상품명 : <span id="상품명-결과"></span></h3>
+    <!-- 수량 등급 기타사항에 주말과제1번에서 작성한 값이 보일 수 있도록 설정 id =" "      -->
+    <h3>납품수량 : <span id="수량-결과"></span></h3>
+    <h3>납품등급 : <span id="등급-결과"></span></h3>
+    <h3>기타사항 : <span id="기타-결과"></span></h3>
+    <script>
+      // A군 = 데이터전달자
+      const A군 = new URL(location.href).searchParams;
+
+      const nameResult = document.getElementById("상품명-결과");
+      nameResult.innerText = A군.get("productName");
+
+      const amountResult = document.getElementById("수량-결과");
+      amountResult.innerText = A군.get("amount");
+
+      const gradeResult = document.getElementById("등급-결과");
+      gradeResult.innerText = A군.get("grade");
+
+      const etcResult = document.getElementById("기타-결과");
+      etcResult.innerText = A군.get("etc");
+    </script>
+
+    <h3>텍스트가 들어갈 자리 : <span id="text-result"></span></h3>
+    <script>
+      /* 근육 소환 */
+      const TR = document.getElementById("text-result");
+      TR.innerText = A군.get("testText");
+      /*
+
+    document                            .   get     Element    By    Id("text-result");
+    document = html 코드가 작성된 문서에서    가져오기 태그중에        id가 text-result 인 것을
+    
+    */
+    </script>
+  </body>
+</html>

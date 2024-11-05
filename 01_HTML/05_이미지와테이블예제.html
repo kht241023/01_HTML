@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지와 테이블 예제</title>
+
+    <!-- 
+    스타일 태그 안에
+    태그이름을 가져와서 중괄호를 작성해줄 때
+    추가적으로 작동은 하지 않지만 주석을 사용해서
+    설명을 작성해야할 때는
+    /* */ 모양으로 설명을 작성할 수 있음
+    -->
+    <style>
+        img {
+            width: 150px; /* 가로 크기를 150으로 고정*/
+        }
+        table{
+            width: 80%;/* 가로 전체에서 크기를 80%만 차지 */
+            border-collapse: collapse;
+            border: 1px solid #ddd; 
+            /* 
+            #ddd는 html 코드에서 특정적으로 붙여준 이름이 없기 때문에
+            #ddd를 작성
+            만약에 사람들이 많이 사용하거나 대표적인 색상이 된다면
+            lightgray나 black white처럼 이름이 붙여질 것
+            */
+            margin: 0 auto;
+        }
+
+        th, td{
+            border:  1px solid #ddd;
+            text-align: center;
+        }
+
+        thead, tfoot {
+            background-color: #f2f2f2;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>상품 정보</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>이미지</th>
+                <th>상품명</th>
+                <th>가격</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td><img src="https://blog.kakaocdn.net/dn/b09Ie6/btqKShjRyXG/XA7WOJZIEeiZiIK3TAK9fK/img.gif"></td>
+                <td>애니메이션 상품</td>
+                <td>50,000원</td>
+            </tr>
+
+            <tr>
+                <td><img src="https://blog.kakaocdn.net/dn/b09Ie6/btqKShjRyXG/XA7WOJZIEeiZiIK3TAK9fK/img.gif"></td>
+                <td>GIF 이미지 상품</td>
+                <td>75,000원</td>
+            </tr>
+            
+            <tr>
+                <td><img src="https://blog.kakaocdn.net/dn/b09Ie6/btqKShjRyXG/XA7WOJZIEeiZiIK3TAK9fK/img.gif"></td>
+                <td>스페셜 이미지 상품</td>
+                <td>120,000원</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td colspan="3">총 상품 수 : 2</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

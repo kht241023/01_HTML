@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>회원가입 결과</title>
+    <style>
+      /* 회원가입하기 버튼을 클릭했을 때 결과에서 표시*/
+      div {
+        width: 50%;
+        text-align: center;
+        border: 1px solid black;
+        border-radius: 15px;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>사진동아리 회원가입 완료</h1>
+      <h3>이름 : <span id="name-result"></span></h3>
+      <h3>아이디 : <span id="id-result"></span></h3>
+      <h3>비밀번호 : <span id="pw-result"></span></h3>
+      <h3>이메일 : <span id="email-result"></span></h3>
+    </div>
+    <script>
+      /*
+        const 새로운 단어를 생성할경우
+        script 내에서 맨 위 상단에 작성
+        
+        */
+      const A군 = new URL(location.href).searchParams;
+
+      // html id에 작성한 글자와 javascript로 작성한 글자에서
+      // 동일한 의미를 가진 글자끼리 연결하기
+      const nameResult = document.getElementById("name-result");
+
+      const idResult = document.getElementById("id-result");
+      const pwResult = document.getElementById("pw-result");
+      const emailResult = document.getElementById("email-result");
+
+      // innerText를 이용해서 전달받은 데이터를 집어넣기
+      nameResult.innerText = A군.get("user-name");
+      idResult.innerText = A군.get("user-id");
+      pwResult.innerText = A군.get("user-pw");
+      emailResult.innerText = A군.get("user-email");
+    </script>
+  </body>
+</html>

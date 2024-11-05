@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>도서 목록</title>
+    <!-- 
+    style 태그
+     화면에 직접적으로 보이지는 않으나
+     보이는 상태를 꾸며주는 태그이기 때문에
+     head 태그 안에 작성을 해줌
+     body나 foot 작성해도 크게 문제가 되진 않지만
+     head 태그 안에 작성하는 것이
+     개발자 간의 규칙
+    -->
+     <style>
+        table {
+            border: 1px solid black;
+            border-collapse: collapse;
+            margin: 0 auto;
+        }
+        th, td {
+            border: 1px solid black;
+            text-align: center;
+        }
+        thead{
+            background-color: darkblue;
+            color: white;
+        }
+        tbody {
+            background-color: lightgray;
+        }
+        tfoot{
+            background-color: lightyellow;
+        }
+        h1{
+            text-align: center;
+        }
+
+     </style>
+  </head>
+
+
+
+
+
+  <body>
+    <h1>도서 목록</h1>
+
+    <table>
+      <thead>
+        <tr>
+          <th>제목</th>
+          <th>저자</th>
+          <th>가격</th>
+          <th>재고</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>데미안</td>
+          <td>헤르만 헤세</td>
+          <td>12,000원</td>
+          <td>20권</td>
+        </tr>
+
+        <tr>
+            <td>노인과 바다</td>
+            <td>헤밍웨이</td>
+            <td>15,000원</td>
+            <td>8권</td>
+        </tr>
+        <tr>
+            <td>죄와 벌</td>
+            <td>도스토예프스키</td>
+            <td>18,000원</td>
+            <td>5권</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+            <td colspan="4">총 도서 수 : 3권</td>
+        </tr>
+
+      </tfoot>
+    </table>
+  </body>
+</html>

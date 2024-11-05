@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form 제출 결과 페이지</title>
+  </head>
+  <body>
+    <h1>form 태그로 전달받은 결과물 눈으로 확인하는 결과 페이지</h1>
+    <h3>입력된 사용자 이름 : <span id="이름-결과"></span></h3>
+
+    <hr />
+    <h2>두 번째 form 태그 안에 로그인 버튼을 누르면 보입니다.</h2>
+    <h3>입력된 사용자 아이디 : <span id="아이디-결과"></span></h3>
+    <h3>입력된 사용자 비밀번호 : <span id="비밀번호-결과"></span></h3>
+
+    <script>
+      /*  
+        주석 사용 방법 
+        script 태그는 주로 head 태그 안에 사용하거나
+        </body> 바디를 닫는 태그 밑으로 몰아서 작성
+        이유는 script 로 작성한 태그를 한 번에 보기 위해 맨 위나 맨아래로 위치 지정
+
+        html(=영어) 라면 script(=스페인어) 와 같은 형식으로 
+        컴퓨터 안에서 언어가 다른 형식으로 존재
+
+        html과 script 서로 다른 언어가 서로 소통하기 위해 규칙을 설정
+        const 새로운 언어명 설정 과 같은 방식으로 설정
+        */
+
+      const 데이터전달하기 = new URL(location.href).searchParams;
+      /* 
+        데이터전달하기는 최초 1회만 작성
+        new URL(location.href) 
+         location = 현재지역 = 현재 보고있는 웹사이트 페이지
+         href     = 현재 위치 주소
+         .searchParams = 이름검색
+         현재 페이지에서 서로 의미가 맞는 이름끼리 검색해서 연결
+        */
+
+      /* 여러 줄 주석*/
+      // 한 줄 주석
+
+      // 1. 10_입력태그 form.html 파일에서 유저-이름으로 작성된 값 가져와서 눈으로 확인할 수 있도록 설정
+      const 이름결과 = document.getElementById("이름-결과");
+      이름결과.innerText = 데이터전달하기.get("유저-이름");
+
+      // 2. 10_입력태그 form.html 파일에서 아이디작성 비밀번호작성으로 작성된 값 가져와서 눈으로 확인할 수 있도록 설정
+
+      // ↓  html 아이디-결과 와 script에 작성한 아이디-결과 가 동일한 의미를 가지고 있다 표시
+      const 아이디결과 = document.getElementById("아이디-결과");
+
+      // ↓  10_입력태그 form.html 에서 사용자가 작성한
+      //    아이디작성값을 가져와서 아이디결과 바구니에 담아서 글자 형식으로 보여주기
+      아이디결과.innerText = 데이터전달하기.get("아이디작성");
+
+      //비밀번호결과 를 위 아이디결과를 활용해서 비밀번호작성된 값을 가져올 수 있도록 설정
+      const 비밀번호결과 = document.getElementById("비밀번호-결과");
+      비밀번호결과.innerText = 데이터전달하기.get("비밀번호작성");
+    </script>
+  </body>
+</html>

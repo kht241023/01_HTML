@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>사진동아리 회원가입</title>
+    <style>
+      div {
+        width: 50%;
+        margin: 0 auto;
+        text-align: center;
+        border: 1px solid black;
+        border-radius: 15px;
+        padding: 20px; /* 공간 확보를 20px 만큼 한 것*/
+      }
+      input {
+        padding: 8px;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+      }
+
+      button {
+        background-color: lightpink;
+        border: none;
+        padding: 16px;
+        border-radius: 10px;
+        font-size: 20px;
+        cursor: pointer;
+      }
+      img {
+        width: 150px;
+        border-radius: 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>사진동아리 회원가입</h1>
+      <img src="cat.jpeg" />
+      <br /><br />
+
+      <form>
+        <label>이름 : </label>
+        <input type="text" name="user-name" />
+        <br /><br />
+
+        <label>아이디 : </label>
+        <input type="text" name="user-id" />
+        <br /><br />
+
+        <label>비밀번호 : </label>
+        <input type="password" name="user-pw" />
+        <br /><br />
+        <label>이메일 : </label>
+        <input type="email" name="user-email" />
+        <br /><br />
+
+        <button>회원가입하기</button>
+      </form>
+    </div>
+  </body>
+</html>
