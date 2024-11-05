@@ -8,6 +8,7 @@ div {
 }
 
 button {
+  display: block;
   padding: 8px 16px;
   background-color: lightcoral;
   border: none;
@@ -24,4 +25,10 @@ input {
 label {
   display: block;
   font-size: 20px;
+}
+
+span {
+  margin: 20px;
+  font-size: 30px;
+  color: blue;
 }
