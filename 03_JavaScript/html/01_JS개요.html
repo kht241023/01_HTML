@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript 개요</title>
+  </head>
+  <body>
+    <h1>Script 언어란?</h1>
+    <pre>
+        기본 프로그램의 동작을
+        사용자의 요구에 맞게 수행되도록 해주는 용도의 언어
+
+        별도의 소스코드 컴파일(이진수로 번역)을 하지 않고
+        Interpreter(인터프리터, 한 줄씩 코드를 읽어서 해석하는 기계, 기능)
+        를 이용해서 코드를 바로 실행
+
+        -장점 : 컴파일에 소요되는 시간이 없음
+        -단점 : 프로그램 실행 시간이 상대적으로 느림
+    </pre>
+    <hr />
+    <h1>Javascript란?</h1>
+    <pre>
+        웹 브라우저(크롬, 엣지, 웨일, 파이어폭스 등)에서
+        주로 사용하는 인터프리터 방식의 객체 지향 프로그래밍 언어
+
+        ECMA Script 표준을 따르는 대표적인 웹 기술
+        (JS 버전 이름: ES5, ES6, ES7, ...)
+    </pre>
+    <hr />
+
+    <h1>JavaScript 코드 작성 방법</h1>
+    <ol>
+      <li>브라우저 개발자도구 -> console에 직접 작성</li>
+      <li>
+        HTML 내부에 script 태그를 이용해서 작성<br />
+        body나 head 등 html 태그 내부에서<br />
+        &lt;script&gt; 태그를 이용해서 작성한다는 의미
+      </li>
+      <li>
+        HTML 외부에 존재하는 .js 파일을 연결해서 사용하는 방법<br />
+        .css 와 비슷하게 사용<br />
+        .css와 다르게 &lt;script src="파일명.js"&gt; 파일을 불러옴
+      </li>
+      <li>
+        태그에 직접 JS코드를 작성하는 방식(권장 XXXXX)
+
+        <h6 style="color: red">CSS 스타일 직접 꾸미기방식</h6>
+
+        <button onclick="alert('버튼클릭되었습니다.')">
+          JS 기능 직접 적용하는 방식
+        </button>
+      </li>
+    </ol>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS 맛보기</title>
+  </head>
+  <body>
+    <h1>Javascript 기능을 사용해서 배경색 변경하기</h1>
+
+    <script>
+      // 한 줄 주석
+      /* 범위  주석*/
+      /* Script 태그 : JS 코드를 작성할 수 있는 태그 */
+
+      //특정 동작이 진행되길 원할 때 기능명을 설정하고
+      // 기능명 안에 동작하고자 하는 기능을 작성
+
+      //function = 기능, 함수      기능을 작성할 것이라는 것을 시작한다는 표기
+      //       어떤기능인지 기능명을 작성() {동작들 작성하기}
+      //               () -> 특정 내용물이 들어오면 동작합니다.
+      // 자바스크립트는 기능에 '' 작은따옴표를 쓰거나
+      //                     "" 큰따옴표를 쓰는게 크게 상관없음
+      function 기능이름() {
+        //alert : 경고, 알리다 (JS : 알림창, 대화상자)
+        alert("");
+      }
+    </script>
+    <h3>사용 지향하는 방식</h3>
+    <button onclick="기능이름()">기능이 생성된 버튼 클릭하기</button>
+
+    <h4>사용 지양하는 방식</h4>
+    <pre>
+        지양 : ~하지 말하지 말아라
+        지향 : 했으면 좋겠다.
+    </pre>
+    <button onclick="alert('버튼 클릭됨')">버튼 클릭하기</button>
+
+    <br /><br />
+    <!--  태그 onclick=""   
+     버튼이 클릭 되었을 때 버튼클릭() 기능을 불러와서 실행
+     onclick = 나는 클릭했을 때 어떤 기능을 실행할거야
+     on의 종류는 다양
+     
+     버튼클릭()    () <- 선택적으로 특정 내용물이 들어오면 내용물을 바탕으로 동작
+    -->
+    <button onclick="버튼클릭()">버튼클릭</button>
+    <script src="../js/01_JS맛보기.js"></script>
+  </body>
+</html>
