@@ -1,0 +1,17 @@
+.계산기 {
+  border: 3px solid black;
+  height: 150px;
+  width: 300px;
+  padding: 30px;
+  margin: auto;
+}
+.btn {
+  display: flex;
+  margin: 10px;
+}
+.btn button {
+  font-size: 30px;
+  border-radius: 15px;
+  margin: 10px;
+  border: 1px solid #ccc;
+}

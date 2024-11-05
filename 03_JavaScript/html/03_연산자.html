@@ -4,25 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>연산자</title>
-    <style>
-      .계산기 {
-        border: 3px solid black;
-        height: 150px;
-        width: 300px;
-        padding: 30px;
-        margin: auto;
-      }
-      .btn {
-        display: flex;
-        margin: 10px;
-      }
-      .btn button {
-        font-size: 30px;
-        border-radius: 15px;
-        margin: 10px;
-        border: 1px solid #ccc;
-      }
-    </style>
+    <link rel="stylesheet" href="../css/03_연산자.css" />
   </head>
   <body>
     <h1>연산자(Operator)</h1>
@@ -48,6 +30,10 @@
       <div class="btn">
         <!-- + 버튼 클릭 시 더하기() 함수 호출 -->
         <button onclick="더하기()">+</button>
+        <button onclick="빼기()">-</button>
+        <button onclick="곱하기()">*</button>
+        <button onclick="몫()">/</button>
+        <button onclick="나머지()">%</button>
       </div>
 
       <div>

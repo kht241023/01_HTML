@@ -39,5 +39,29 @@ function 더하기() {
 function 빼기() {
   const value1 = 숫자1.value;
   const value2 = 숫자2.value;
-  결과.innerText = value1 - value2;
+  결과.innerText = Number(value1) - Number(value2);
+}
+
+function 곱하기() {
+  const value1 = 숫자1.value;
+  const value2 = 숫자2.value;
+  결과.innerText = Number(value1) * Number(value2);
+}
+
+/* 나누기 연산 함수 */
+function 몫() {
+  const value1 = 숫자1.value;
+  const value2 = 숫자2.value;
+  결과.innerText = Number(value1) / Number(value2);
+}
+
+/* 나머지 연산 함수 
+나머지 연산(%)는 나누기 계산 시 몫이 정수인 부분까지만 계산하고
+남은 나머지 값을 출력
+
+*/
+function 나머지() {
+  const value1 = 숫자1.value;
+  const value2 = 숫자2.value;
+  결과.innerText = Number(value1) % Number(value2);
 }
