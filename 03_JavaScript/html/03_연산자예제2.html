@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>더하기 연산자</title>
+  </head>
+  <body>
+    <h1>더하기 연산자</h1>
+    <pre>
+        1. 숫자 덧셈(Number Addition)
+            숫자들을 더할 때 사용 Number로 감싸기
+        2. 문자(들 나)열 연결(String Concatenation)
+            문자열들을 연결할 때 사용
+    </pre>
+    <h3>숫자 덧셈</h3>
+    <div>
+      <span id="result1"></span>
+      <span id="result2"></span>
+    </div>
+    <script>
+      // 숫자에 숫자를 큰 따옴표나 작은 따옴표로 감싸면 숫자 -> 글자로 지정
+      const 숫자1 = "5";
+      const 숫자2 = "10";
+      // 숫자 덧셈
+      document.getElementById("result1").innerText = 숫자1 + 숫자2;
+      document.getElementById("result2").innerText =
+        Number(숫자1) + Number(숫자2);
+    </script>
+    <hr />
+
+    <h3>문자열 이어쓰기</h3>
+    <h4 id="문자열더하기"></h4>
+    <script>
+      const greeting = "안녕하세요.";
+      const name = "철수님";
+
+      document.getElementById("문자열더하기").innerText = greeting + name;
+    </script>
+  </body>
+</html>

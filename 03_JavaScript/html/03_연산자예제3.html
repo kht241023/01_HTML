@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>정보 입력 및 출력</title>
+    <link rel="stylesheet" href="../css/03_연산자예제3.css" />
+  </head>
+  <body>
+    <h1>정보 입력하기</h1>
+    <div class="form-container">
+      <label for="user-name">이름 : </label>
+      <input type="text" id="user-name" placeholder="이름을 입력하세요." />
+
+      <label for="user-email">이메일 : </label>
+      <input type="email" id="user-email" placeholder="이메일을 입력하세요." />
+
+      <label for="user-number">번호 : </label>
+      <input type="text" id="user-number" placeholder="번호를 입력하세요." />
+
+      <button onclick="정보확인하기()">입력 확인</button>
+    </div>
+
+    <div class="info-container">
+      <h2>입력된 정보</h2>
+      <p><strong>이름 : </strong><span id="info-name"></span></p>
+      <p><strong>이메일 : </strong><span id="info-email"></span></p>
+      <p><strong>번호 : </strong><span id="info-number"></span></p>
+    </div>
+
+    <script src="../js/03_연산자예제3.js"></script>
+  </body>
+</html>
