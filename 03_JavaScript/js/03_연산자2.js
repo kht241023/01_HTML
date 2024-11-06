@@ -10,13 +10,14 @@
 // 처음에 새로운 변수명을 표기할 때는 const 나 let을 붙이지만 변수명을 다시 사용할 때는
 // const 나 let을 붙이지 않음
 let count = 0;
+// result = document.getElementById("result1").innerText = 5;
+const result = document.getElementById("result1");
+const input = document.getElementById("input1");
 
 function minus() {
-  // result = document.getElementById("result1").innerText = 5;
-  const result = document.getElementById("result1");
   // Number 숫자로 문자를 변경할 때 value라고 적힌 문자열에 감싸주는 것이 좋음
-  const input = Number(document.getElementById("input1").value);
-  count -= input;
+  const vl = Number(input.value);
+  count -= vl;
   result.innerText = count;
 }
 
@@ -30,13 +31,11 @@ count 라는 변수를 사용해서 계산을 누적하고 결과만 result 표�
 */
 
 function plus() {
-  const result = document.getElementById("result1");
-  const input = Number(document.getElementById("input1").value);
   // innerText 글자 형식
   // result.innerText = 글자형식으로 취급될 수 있기 때문에 동일하게 Number 로 감싸서
   // 숫자 + 숫자 끼리 누적이 될 수 있도록 설정
-
-  count += input; //이미 숫자로 모든 누적 처리를 끝낸 상태
+  const vl = Number(input.value);
+  count += vl; //이미 숫자로 모든 누적 처리를 끝낸 상태
   result.innerText = count; //숫자로 모든 누적을 끝낸 수만 가져오기
 
   // 글자 += 숫자 + 숫자 로 변환한다고 하기는 하지만
@@ -46,9 +45,7 @@ function plus() {
 }
 
 function mul() {
-  // input result html에서 가져와 변수명으로 설정
-  // input 은 한 번에 value까지 작성해서 Number 감싸주기
-  // 누적 곱하기 *=
-  // count 사용
-  // 누적된 결과 innerText로 보여주기
+  const vl = Number(input.value);
+  count *= vl;
+  result.innerText = count;
 }
