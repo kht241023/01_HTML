@@ -7,5 +7,60 @@
   </head>
   <body>
     <h1>논리 연산자(&&, ||, ! )</h1>
+    <h3>AND 연산자 (A && B)</h3>
+    <pre>
+        - A, B 모두 true 일 경우 결과로 true를 반환하는 연산자
+          (나머지 경우는 모두 false)
+          A = 조건 1     B = 조건 2
+          A   와   B가 모두 참일 때만 true
+        (내가 회원가입 할 때 작성한 값이 로그인을 시도했을 때)
+          A = 아이디가 일치하는가 ?
+          B = 비밀번호가 일치하는가 ?
+    </pre>
+    <hr />
+    <h3>로그인 하기</h3>
+    <pre>
+        - 회원가입 할 때 저장한 아 이 디 : 'member01'
+        - 회원가입 할 때 저장한 비밀번호 : 'pass01'
+        아이디와 비밀번호가 일치할 경우              alert("로그인 성공~")
+
+        아이디와 비밀번호가 하나라도 일치하지 않으면  alert ("아이디 또는 비밀번호가 일치하지 않습니다.")
+    </pre>
+    <div>
+      ID : <input type="text" id="inputId" /> <br />
+      PW : <input type="password" id="inputPw" /> <br />
+      <button onclick="login()">로그인</button>
+    </div>
+    <hr />
+    <h3>OR 연산자(||)</h3>
+    <pre>
+      - A, B 둘 중 하나라도 true 일 경우 결과로 true 반환하는 연산자
+         (A, B 모두 false 일 경우에만 false)
+        
+         번호 
+         회원가입 할 때 전화번호 나 휴대폰 번호 둘중 하나라도 입력
+        A = 핸드폰 번호를 작성했는가
+        B = 일반 전화번호를 작성했는가
+    </pre>
+    <style>
+      #msg {
+        color: red;
+        display: none; /*초기에는 숨김*/
+      }
+    </style>
+    <div>
+      <h4>전화번호 입력</h4>
+      휴대폰번호 : <input type="text" id="phone" />
+      <br />
+      일반전화번호 : <input type="text" id="tel" />
+      <br />
+      <button onclick="checkNumber()">확인</button>
+
+      <!-- 경고메세지 보이기 숨기기-->
+      <p id="msg">전화번호나 휴대폰 번호를 입력해주세요.</p>
+    </div>
+
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <script src="../js/03_연산자3_논리.js"></script>
   </body>
 </html>
