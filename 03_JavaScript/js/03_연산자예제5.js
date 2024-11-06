@@ -17,6 +17,8 @@ function mul() {
   rst.innerText = "곱 : " + total;
 }
 function evenOdd() {
+  const v1 = Number(num1.value);
+  const v2 = Number(num2.value);
   // 홀 짝 유무 확인
   const sumResult = v1 + v2;
   const isEven = sumResult % 2 == 0 ? "짝수" : "홀수";
