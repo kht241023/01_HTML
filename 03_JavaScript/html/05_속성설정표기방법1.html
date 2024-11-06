@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document 문서 하위 항목 사용표기</title>
+  </head>
+  <body>
+    <h1>문서 하위 항목 사용표기</h1>
+
+    <h3>DOM(Document Object Model)</h3>
+    <pre>
+        웹 문서(HTML)의 모든 요소에 JavaScript가 접근하기 위해 설정한 형식
+
+        요소 : &lt;태그&gt;내용물&lt;/태그&gt;
+
+        특정 태그 내에 작성된 아이디값이나 클래스값으로 접근할 수 있다.
+
+        예)
+        document.getElementById("id속성명");
+        document
+            - getElementById
+                - value
+                - style
+                - innerHTML
+            - getElementByClassName
+                - length(글자길이 가져올 때 사용)
+                - item
+                - nameItem
+            - getElementByTagName
+                - length(글자길이 가져올 때 사용)
+                - item
+                - nameItem
+
+        문서 내에서 일치하는 아이디명을 가져오고
+                    아이디명 내에서 값을 가져오겠다.
+        document.getElementById("id명")
+                  getElementById("id명").value
+        
+        문서 내에서 일치하는 아이디명을 가져오고 값을 가져오겠다.
+        document.getElementById("id명").value
+            
+    </pre>
+  </body>
+</html>

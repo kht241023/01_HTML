@@ -1,0 +1,44 @@
+body {
+  background-color: #fdf7f2;
+  color: #333;
+  display: flex; /*block -> flex 가로정렬*/
+  flex-direction: column; /*세로로 나란히 보이게 설정*/
+  align-items: center; /*가운데 정렬*/
+  padding: 20px;
+}
+
+h1 {
+  color: #d2691e;
+}
+
+.form-container {
+  margin: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 20px;
+  background-color: #d2691e;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #b5571a;
+}
+
+.recipe-container {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: bisque;
+  border-radius: 8px;
+}
+
+#recipe-text {
+  font-size: 20px;
+  color: #555;
+}
