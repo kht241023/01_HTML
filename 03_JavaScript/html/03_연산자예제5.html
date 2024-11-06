@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>간단 계산기</title>
+    <link rel="stylesheet" href="03_연산자예제5.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>간단 계산기</h1>
+      <p>두 숫자를 입력하고 원하는 연산을 선택하세요:</p>
+      <input type="number" id="num1" placeholder="첫 번재 숫자" />
+      <input type="number" id="num2" placeholder="첫 번재 숫자" />
+
+      <div>
+        <button onclick="sum()">덧셈</button>
+        <button onclick="mul()">곱셈</button>
+        <button onclick="evenOdd()">짝수/홀수</button>
+        <!-- even : 짝수 odd : 홀수-->
+      </div>
+      <div id="result"></div>
+    </div>
+
+    <script src="../js/03_연산자예제5.js"></script>
+  </body>
+</html>

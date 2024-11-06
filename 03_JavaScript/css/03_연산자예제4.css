@@ -1,0 +1,16 @@
+.counter-container {
+  text-align: center;
+  padding: 20px;
+  border: 2px solid #ddd;
+}
+
+#count {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+button {
+  padding: 10px 20px;
+  font-size: 20px;
+  border: none;
+  border-radius: 10px;
+}
