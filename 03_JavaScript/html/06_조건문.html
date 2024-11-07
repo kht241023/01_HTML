@@ -12,9 +12,68 @@
                   어떤 상태에 따라 다르게 동작하는 것을 의미
                   조건     = 만약 이 조건이 참이라면 이 작업을 수행
                   상태 상황 = 특정한 상태나 상황에서만 이 작업을 수행
-                  
+
       프로그래밍 코드가 해석되는 순서를 제어하는 제어문의 한 종류로
       작성된 조건식에 따라서 수행되는 코드를 변경하는 구문
     </pre>
+    <h3>if(만약에...)</h3>
+    <pre>
+      <code>
+        if(조건식) {
+          조건식이 true인 경우 실행할 코드;
+        }
+      </code>
+
+      * 조건식 : 결과가 true, false 인 식(연산)
+
+      * 조건문 : 조건식의 결과에 따라 실행을 제어하는 구문 (if, switch)
+    </pre>
+    <h4>입력받은 수가 양수인지 아닌지 검사</h4>
+    <input type="number" id="input1" />
+    <button onclick="check1()">양수인지 검사하기</button>
+    <hr />
+    <h3>if(만약에) - else(아니면) 문</h3>
+    <pre>
+      <code>
+        if(조건식) {
+          조건식이 true인 경우 실행할 코드;
+        } else {
+          if에 작성한 조건식이 false 인 경우 수행할 경우
+        }
+
+        삼항연산자
+        if조건식         true       else    false
+        (         )   ?              :                ;
+      </code>
+      if - else 문  vs 삼항연산자
+      if - else 문 : true나 false 일 때 수행해야하는 구문이 많을 때 많이 사용
+
+      삼 항 연 산 자: true나 false 일 때 수행해야하는 구문이 적을 때 많이 사용    
+
+      * else 구문에는 조건식을 작성하는 ()가 없음
+    </pre>
+    <hr />
+    <h3>
+      if(만약에) - else if(아니라면, 이렇게, 저렇게) - else (이도 저도 아니라면)
+    </h3>
+    <pre>
+      <code>
+        if(조건식A) {
+          조건식A가 true인 경우 실행;
+        
+        } else if (조건식B) {
+          조건식A가 false 이면서
+          조건식B가 true 인 경우 실행;
+        
+        } else {
+          조건식A와 조건식B가 모두 false 인 경우 실행
+        } 
+      </code>
+
+      * else if 구문은 if와 else 사이에 원하는 만큼 작성 가능 (작성 제한 X)
+        대신 무조건 if 와    else 사이에 작성
+    </pre>
+
+    <script src="../js/06_조건문.js"></script>
   </body>
 </html>

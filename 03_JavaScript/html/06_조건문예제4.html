@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>성적에 따라 등급 출력</title>
+  </head>
+  <body>
+    <h1>점수를 입력하세요.(0 ~ 100 입력가능)</h1>
+    <input
+      type="number"
+      id="inputScore"
+      placeholder="점수 입력"
+      min="0"
+      max="100"
+    />
+    <button onclick="checkGrade()">등급확인</button>
+    <p id="gradeMsg"></p>
+    <script src="../js/06_조건문예제4.js"></script>
+  </body>
+</html>

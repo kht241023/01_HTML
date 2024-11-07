@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>if else 조건문 예제</title>
+    <style>
+      /*나이가 18세 이상일 경우 보일 색상*/
+      .success {
+        color: green;
+        background-color: lightcoral;
+      }
+      /*나이가 18세 미만일 경우 보일 색상*/
+      .fail {
+        color: red;
+        background-color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>나이를 입력하세요.</h1>
+    <input type="number" id="age" placeholder="나이 입력" />
+    <button onclick="checkAge()">확인</button>
+    <p id="ageMsg"></p>
+
+    <script src="../js/06_조건문예제1.js"></script>
+  </body>
+</html>
