@@ -1,11 +1,28 @@
 const inputId = document.getElementById("inputId");
 const inputPw = document.getElementById("inputPw");
+const mp = document.getElementById("inputMp");
+const tp = document.getElementById("inputTp");
+const msg = document.getElementById("msg");
 
-각 기능별
-로그인과
-로그인 성공 로그인 실패 여부 alert 확인
+// 핸드폰 일반전화 둘 중 하나라도 작성했는지 확인하는 멘트
+//만약에 작성을 하지 않았다 둘 중하나 입력하라는 문구가 나오고
+// 작성했다면 문구가 안보이게
+function signUp() {
+  const abc = 10;
+  // const 새로만들어준 이름을 아래에서 사용하지 않았기 때문에 글자가 흐리게 보이는 것
+  // 글자를 선명하게 보기 위해서는 abc 라는 새로 만들어진 변수명을 아래에서 사용해야함
+  const mobilePhone = mp.value;
+  const telPhone = tp.value;
+  mobilePhone || telPhone
+    ? (msg.style.display = "none")
+    : (msg.style.display = "block");
+}
 
+function login() {
+  const id = inputId.value;
+  const pw = inputPw.value;
 
-회원가입을 했을 때
-휴대전화나 일반전화 둘 중하나라도 기입이 되어있는지 확인하고
-둘다 기입을 안하면 둘중 하나 기입하라는 문구 보이게 표기하기.
+  id == "khtzzang" && pw == "kht1004"
+    ? alert("로그인성공!")
+    : alert("로그인실패!");
+}
