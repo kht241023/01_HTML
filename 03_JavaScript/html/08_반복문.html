@@ -19,11 +19,24 @@
         for([1]초기식 ; [2]조건식; [4]증감식) {
 
             [3] 조건식이 true 인 경으 반복 수행할 코드;
-        
         }
 
         // 1 ~ 4까지 1회 반복 후, 2 ~ 4 계속 반복
         조건식이 false 가 되면 바로 종료
+
+        초기식 : for문을 제어하는 용도의 변수 선언
+
+        조건식 : for문의 반복 여부를 지정하는 식
+                -true 일 때 반복, false 일 때 반복 종료
+        
+        증감식 : 초기식에 사용된 값을 변환 시키는 식
+                -> 변환된 초기식에 의해서 조건식의 결과가 달라지게 함
     </pre>
+    <button onclick="check1()">확인 1</button>
+    <button onclick="check2()">확인 2</button>
+    <button onclick="check3()">확인 3</button>
+    <button onclick="check4()">확인 4</button>
+
+    <script src="../js/07_반복문.js"></script>
   </body>
 </html>

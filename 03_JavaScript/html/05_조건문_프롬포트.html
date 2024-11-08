@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>prompt 프롬포트</title>
+    <style>
+      .container {
+        text-align: center;
+        padding: 20px 30px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        width: 300px;
+      }
+      h3 {
+        color: #00796b;
+      }
+      button {
+        padding: 10px 20px;
+        font-size: 20px;
+        cursor: pointer;
+      }
+      #output {
+        margin-top: 20px;
+        font-size: 20px;
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>프롬포트</h1>
+    <pre>
+    prompt(내용) : 문자열을 작성할 수 있는 알림창
+     - 확인 버튼 클릭 시 : 입력한 값 반환
+     - 취소 버튼 클릭 시 : null 값 반환
+   </pre
+    >
+    <hr />
+    <div class="container">
+      <h3>닉네임 입력하기</h3>
+      <button onclick="enterNick()">입장하기</button>
+      <p id="output"></p>
+    </div>
+    <script>
+      function enterNick() {
+        const output = document.getElementById("output");
+        const 닉네임 = prompt("닉네임을 입력하세요.");
+        // 아무런 값도 없는 것 = null 값
+        if (닉네임) {
+          // value 값 처럼 innerText도 어떤 값을 받아 변화된 값을 넣어주는 것이기 때문에
+          // 되도록이면 지역 변수 안에 작성해주거나 특정 결과가 누적된 이후에 작성해주는 것이 좋음
+          output.innerText = "환영합니다." + 닉네임 + " 님!";
+        } else {
+          output.innerText = "입력된 값이 없습니다.";
+        }
+      }
+    </script>
+  </body>
+</html>
