@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>버튼을 활용한 음료 주문하기</title>
+    <style>
+      button {
+        border: none;
+        border-radius: 10px;
+        font-size: 20px;
+        padding: 10px 20px;
+      }
+      button:hover {
+        background-color: aliceblue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>음료 주문하기</h1>
+    <div>
+      <button onclick="add('1')">아메리카노 (&#8361; 3000)</button>
+      <button onclick="add('2')">카페라떼 (&#8361; 5500)</button>
+      <button onclick="add('3')">디카페인 아메리카노 (&#8361; 8000)</button>
+    </div>
+    <div id="price"></div>
+    <script>
+      function add(num) {
+        switch (num) {
+          case "1":
+            price.innerText = "금액확인하기 : 3000";
+            break;
+          case "2":
+            price.innerText = "금액확인하기 : 5500";
+            break;
+          case "3":
+            price.innerText = "금액확인하기 : 8800";
+            break;
+        }
+      }
+      /*
+            const price = document.getElementById("price");
+            function add( num   ) {
+                price.innerText = "금액확인하기 : " + num;
+            }
+    */
+    </script>
+  </body>
+</html>
