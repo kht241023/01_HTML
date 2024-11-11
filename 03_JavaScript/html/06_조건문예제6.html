@@ -65,16 +65,41 @@
 
       output.innerText = balance; //초기 금액인 10000원을 설정
 
-      function 출금기능() {}
+      function 출금기능() {
+        // 출금할 때 은행어플에서 비밀번호4자리가 일치하는지 확인하고 일치하면 출금
+        // 비밀번호 1234
+        const password = prompt("비밀번호를 입력하세요.");
+        // 만약에 비밀번호가 일치할 경우 출금이되고 일치하지 않을 경우 비밀번호를 다시
+        //입력해주세요.
+        if (password == "1234") {
+          if (Number(amount.value) > balance) {
+            //만약에 출금할 금액이 현재 통장에 들어있는 금액보다 클 경우
+            alert("출금 금액이 잔액보다 클 수 없습니다.");
+          } else {
+            //출금할 금액이 현재 통장에 들어있는 금액보다 작을 경우
+            balance -= Number(amount.value);
+            output.innerText = balance;
+            amount.value = "";
+          }
+        } else {
+          alert("비밀번호가 일치하지 않습니다.다시 입력해주세요.");
+        }
+      }
 
       /* 입금 버튼을 클릭했을 때 수행할 동작*/
       function 입금기능() {
         // 입금 버튼 클릭 시
         // input에 입력된 금액 만큼 잔액(balance)에 추가
 
+        //input이 빈 값인 상태에서 입금 버튼을 누르면
+
+        // 금액을 입력해주세요 alert창이 뜨게 하기
         balance += Number(amount.value); // 더하기 이어붙이기와 더하기Number
         output.innerText = balance; //input에 작성한 금액을 기존에 있던 잔액에 더해서
         // 최종 추가된 값으로 다시 보여주기
+
+        //input 값 지워주는 트릭 추가
+        amount.value = "";
       }
     </script>
   </body>
