@@ -31,9 +31,27 @@ function check2() {
     // else if 13 세 이상은 청소년 나머지는 어린이입니다.
     if (age >= 18) {
       alert("성인입니다.");
+    } else if (age >= 13) {
+      alert("청소년입니다.");
+    } else {
+      alert("어린이입니다.");
     }
   }
 }
 //check3 함수를 만들어서
 //gender 변수명으로 여자인지 남자인지
 //prompt 확인하는 코드 작성
+function check3() {
+  let gender;
+
+  while (gender !== null) {
+    gender = prompt("성별을 입력하세요.");
+    if (gender === "여자") {
+      alert("여자이군요!");
+    } else if (gender === "남자") {
+      alert("남자이군요!");
+    } else {
+      alert("잘못입력했습니다. 다시 입력해주세요.");
+    }
+  }
+}
