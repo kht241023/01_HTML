@@ -73,3 +73,81 @@ function check4() {
   // 담고 결과2로 b의 모든 값을 출력
   alert(결과2);
 }
+
+/*
+while 문 기본 구조
+while (조건) {
+  //반복할 코드
+
+}
+*/
+
+// while1 기능의 버튼을 누르면 1부터 5까지 숫자를 더한 값을 출력
+function while1() {
+  let num = 1; // let 변할 수 있는 변수명을 작성 const 변할 수 없는 상수명을 작성
+
+  while (num <= 5) {
+    //조건이 true일 때 실행할 구문 작성
+    alert("num 의 숫자값은 " + num + " 입니다.");
+    // 계속 num 값이 1이기 때문에 무한 반복
+    // num 숫자를 1씩 증가시켜서 숫자가 5가 되면 while문을 종료하기
+    num++; // num = num + 1;
+  }
+}
+// while2 기능의 버튼을 누르면 1부터 10까지 더한 숫자값 출력
+// console.log 로 abc라는 변수명의 들어있는 값 출력
+function while2() {
+  let abc = 1;
+
+  while (abc <= 10) {
+    console.log("========= while2의 버튼 =========");
+    console.log("abc의 값 : " + abc);
+    abc++;
+  }
+}
+
+// while3 기능의 버튼을 누르면 1부터 10까지 더한 숫자값 출력
+// console.log 로 abc라는 변수명의 들어있는 값 출력
+// while3 break 를 이용해서 숫자 5에서 멈추고 기존의 console.log 출력
+function while3() {
+  //break 맨 마지막에 오게 작성
+  let abc = 1;
+  while (abc <= 10) {
+    console.log("========= while3의 버튼 =========");
+    console.log("abc의 값 : " + abc);
+    abc++;
+
+    // 숫자가 5까지오면 멈추기
+    if (abc == 5) {
+      break;
+    }
+  }
+}
+
+//while4 라는 지역변수 안에서만 사용하는 변수명을 설정할 경우에는
+// {} 안에 변수명을 작성
+// xyz 숫자 5를 확인
+function while4() {
+  let xyz = 0;
+  while (xyz <= 20) {
+    xyz++;
+    console.log(xyz);
+  }
+}
+
+//07_반복문.html 과 07_반복문.js 에 while5() 버튼 생성한다.
+// 생성한다음
+// 시작숫자를 5로 시작하고 20으로 끝나는 while 조건 작성
+// 중간에 15라는 숫자를 만나면 while 중지
+function while5() {
+  let start = 5;
+
+  while (start <= 20) {
+    console.log("숫자는 " + start + " 입니다.");
+    start++;
+
+    if (start == 15) {
+      break; // 숫자가 15가 되면 위에서 진행하던 코드 모두 중지
+    }
+  }
+}
