@@ -12,20 +12,20 @@
     <p id="result"></p>
     <script>
       function checkAge() {
-        const age = document.getElementById("inputAge").value();
+        const age = document.getElementById("inputAge").value;
         const result = document.getElementById("result");
 
         if (age) {
           if (age >= 18) {
-            result.innerText("성인입니다.");
+            result.innerText = "성인입니다.";
           } else if (age >= 13) {
-            result.innerText("청소년입니다.");
+            result.innerText = "청소년입니다.";
           } else {
-            result.innerText("어린이입니다.");
+            result.innerText = "어린이입니다.";
           }
         } else {
           // 나이 입력이 없을 때
-          result.innerText("나이를 입력해주세요.");
+          result.innerText = "나이를 입력해주세요.";
         }
       }
       /*
