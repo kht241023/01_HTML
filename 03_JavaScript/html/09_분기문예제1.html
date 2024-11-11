@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KHT 카페</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        /*
+            세로  view height 100 %    
+            핸드폰, 태블릿, 컴퓨터 화면 세로 전체를 100% 사용한다.
+            홈페이지마다 거의 사용
+            */
+        background-color: #f5f5f5;
+      }
+      .menu-container {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        width: 500px;
+      }
+      ul {
+        list-style: none;
+      }
+      li {
+        margin: 10px;
+        font-size: 20px;
+      }
+
+      button {
+        margin: 10px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 10px;
+        font-size: 20px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #333;
+        color: #fff;
+      }
+
+      #result {
+        margin-top: 20px;
+        font-size: 25px;
+        color: yellowgreen;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="menu-container">
+      <h1>카페 메뉴</h1>
+      <p>메뉴를 선택해주세요:</p>
+      <ul>
+        <li>1. 아메리카노</li>
+        <li>2. 카페라떼</li>
+        <li>3. 프라푸치노</li>
+      </ul>
+      <button onclick="selectMenu()">주문하기</button>
+      <p id="result"></p>
+      <script src="../js/09_분기문예제1.js"></script>
+    </div>
+  </body>
+</html>
