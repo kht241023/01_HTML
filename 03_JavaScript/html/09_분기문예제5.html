@@ -3,7 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>분기문 파라미터 매개변수 활용하기</title>
+    <title>분기문 예제5</title>
   </head>
-  <body></body>
+  <body>
+    <h1>switch case 문을 활용해서 글자 표현하기</h1>
+    <button onclick="선택('cola')">1. 코카콜라 (500원)</button>
+    <button onclick="선택('fanta')">2. 환타 (600원)</button>
+    <button onclick="선택('soda')">3. 사이다 (700원)</button>
+    <h2 id="total">총 금액: 0원</h2>
+
+    <script>
+      let totalPrice = 0; //초기 총 금액 0원
+
+      function 선택(let drink = 'soda') {// 파라미터 매개변수
+          switch (drink) {
+              case "cola":
+                  totalPrice += 500;
+                  break;
+              case "fanta":
+                  totalPrice += 600;
+                  break;
+              case "soda":
+                  totalPrice += 700;
+                  break;
+          }
+      }
+    </script>
+  </body>
 </html>
