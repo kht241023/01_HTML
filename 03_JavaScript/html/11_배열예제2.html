@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>점심 메뉴 뽑기</title>
+  </head>
+  <body>
+    <h1>점심 메뉴 뽑기</h1>
+    <div>
+      <h3>오늘의 점심 : <span id="menuResult"></span></h3>
+      <button onclick="selectMenu()">뽑기</button>
+    </div>
+    <script>
+      /** 점심 메뉴 뽑기 기능 **/
+      function selectMenu() {
+        //결과 출력 span
+        const menuResult = document.getElementById("menuResult");
+
+        // 점심 메뉴로 초기화된 배열 생성
+        const 메뉴들 = [
+          "돈까스",
+          "깐풍기",
+          "햄버거",
+          "멸치국수",
+          "마파두부",
+          "샌드위치",
+          "볶음밥",
+          "순대국밥",
+        ];
+
+        // 랜덤으로 점심메뉴를 뽑기 위해서 메뉴들 배열 index 범위 내에서 랜덤의 수를 생성
+        // 난수  = 수가 모호하다  亂數 어지러울 난 셀 수 정의된 범위 내에서 무작위로 추출된 숫자값
+
+        const 랜덤숫자 = Math.floor(Math.random() * 메뉴들.length);
+        menuResult.innerText = 메뉴들[랜덤숫자];
+      }
+    </script>
+  </body>
+</html>
