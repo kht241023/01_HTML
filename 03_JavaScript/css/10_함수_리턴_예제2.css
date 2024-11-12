@@ -1,0 +1,26 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #fff7e6;
+  color: #6b4226;
+}
+button {
+  border: none;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #f4a460;
+  font-size: 20px;
+}
+button:hover {
+  background-color: #e9967a;
+}
+h3 {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #fff4e0;
+}

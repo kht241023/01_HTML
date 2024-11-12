@@ -4,17 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>분기문 파라미터 매개변수 활용하기</title>
-    <style>
-      button {
-        border: none;
-        border-radius: 10px;
-        font-size: 20px;
-        padding: 10px 20px;
-      }
-      button:hover {
-        background-color: lightyellow;
-      }
-    </style>
+    <link rel="stylesheet" href="../css/09_분기문예제4.css" />
   </head>
   <body>
     <h1>버튼을 활용한 과일 주문하기</h1>
@@ -24,30 +14,6 @@
       <button onclick="선택('kiwi')">키위 (&#8361; 3,000)</button>
       <h2 id="price"></h2>
     </div>
-    <script>
-      /*
-        사용하고자하는 변수명만 작성
-        let 변수명 ; 작성하기에는 코드가 너무 복잡하기때문에
-        어떤 값이 들어올지 모르기 때문에 let 변수명만 작성
-        */
-      function 선택(abc) {
-        const price = document.getElementById("price");
-        let fruitPrice = 0;
-        switch (abc) {
-          case "apple":
-            fruitPrice = 2000;
-            break;
-          case "grape":
-            fruitPrice = 5000;
-            break;
-          case "kiwi":
-            fruitPrice = 3000;
-            break;
-          // 버튼으로 클릭할 경우에는 잘못 클릭할 이유가 없기 때문에
-          // default 를 작성하지 않아도 됨
-        }
-        price.innerText = fruitPrice;
-      }
-    </script>
+    <script src="../js/09_분기문예제4.js"></script>
   </body>
 </html>

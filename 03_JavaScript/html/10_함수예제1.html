@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>파라미터와 아규먼트 활용하기</title>
+  </head>
+  <body>
+    <h1>차 구매하기</h1>
+    <button onclick="차구매('소나타')">소나타 구매하기</button>
+    <button onclick="차구매('아반떼')">아반떼 구매하기</button>
+    <button onclick="차구매('제네시스')">제네시스 구매하기</button>
+    <h3 id="result"></h3>
+    <script>
+      function 차구매(model) {
+        document.getElementById("result").innerText =
+          model + "구매 완료 되었습니다.";
+      }
+
+      /* 차구매라는 함수를 사용해서
+            소나타 아반떼 제네시스 전달인자(아규먼트)를 받아
+            model이라는 매개변수(파라미터)를 활용해서
+            result.innerText로 model + 구매가 완료 되었습니다. 표기
+            if나switch 사용 X
+        */
+    </script>
+  </body>
+</html>

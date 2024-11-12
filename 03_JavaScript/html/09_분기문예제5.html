@@ -11,23 +11,6 @@
     <button onclick="선택('fanta')">2. 환타 (600원)</button>
     <button onclick="선택('soda')">3. 사이다 (700원)</button>
     <h2 id="total">총 금액: 0원</h2>
-
-    <script>
-      let totalPrice = 0; //초기 총 금액 0원
-
-      function 선택(let drink = 'soda') {// 파라미터 매개변수
-          switch (drink) {
-              case "cola":
-                  totalPrice += 500;
-                  break;
-              case "fanta":
-                  totalPrice += 600;
-                  break;
-              case "soda":
-                  totalPrice += 700;
-                  break;
-          }
-      }
-    </script>
+    <script src="../js/09_분기문예제5.js"></script>
   </body>
 </html>
