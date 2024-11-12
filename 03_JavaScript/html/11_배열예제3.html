@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>커피 쏘기</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+      h1 {
+        color: #555;
+      }
+      h3 {
+        color: orange;
+      }
+
+      button {
+        border: none;
+        padding: 10px 20px;
+        font-size: 20px;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: aliceblue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>커피 쏘기</h1>
+    <div>
+      <h3>오늘 커피 쏠 사람 : <span id="result"></span></h3>
+      <button onclick="randomCoffee()">커피쏘기!</button>
+    </div>
+    <script>
+      /** 커피 쏠 사람 뽑기 기능 **/
+      function randomCoffee() {
+        const result = document.getElementById("result");
+
+        const 사람들 = [
+          "철수",
+          "영희",
+          "민수",
+          "지수",
+          "수민",
+          "현아",
+          "진호",
+          "미나",
+        ];
+
+        //랜덤숫자 생성
+        const 랜덤숫자 = Math.floor(Math.random() * 사람들.length);
+
+        result.innerText = 사람들[랜덤숫자];
+      }
+    </script>
+  </body>
+</html>
