@@ -1,0 +1,30 @@
+.container {
+  width: 360px;
+  border: 1px solid black;
+  margin: 50px 20px;
+}
+/*채팅이 눈에 보여지는 화면*/
+#chatting-bg {
+  width: 100%;
+  height: 400px;
+  background-color: rgb(178, 199, 217);
+  /*
+    overflow : 내부 내용이 감싸는 요소를 넘었을 때 처리하는 속성
+    - auto   : 넘치기 전 ->변화없음
+                넘친 후  -> 스크롤 생성 
+    */
+  overflow: auto;
+}
+
+/*채팅 내용*/
+
+p {
+  margin: 20px 10px;
+  text-align: right;
+}
+
+span {
+  padding: 5px;
+  border-radius: 5px;
+  background-color: rgb(254, 234, 51);
+}

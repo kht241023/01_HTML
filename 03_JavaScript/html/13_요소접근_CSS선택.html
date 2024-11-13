@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Radio input 선택 확인</title>
+    <link rel="stylesheet" href="../css/13_요소접근_이름3.css" />
+  </head>
+  <body>
+    <h1>좋아하는 색상을 선택하세요.</h1>
+    <div class="conainer">
+      <input type="radio" name="색상" id="red" value="빨강" required checked />
+      <label for="red">빨강</label>
+
+      <input type="radio" name="색상" id="green" value="초록" />
+      <label for="green">초록</label>
+
+      <input type="radio" name="색상" id="blue" value="파랑" />
+      <label for="blue">파랑</label>
+
+      <input type="radio" name="색상" id="yellow" value="노랑" />
+      <label for="yellow">노랑</label>
+    </div>
+
+    <button onclick="checkColor()">색상 선택</button>
+    <p id="result"></p>
+
+    <script>
+      function checkColor() {
+        const selectColor = document.querySelector(
+          'input[name="색상"]:checked'
+        );
+
+        if (selectColor) {
+          document.getElementById("result").innerText = selectColor.value;
+        }
+      }
+    </script>
+  </body>
+</html>
