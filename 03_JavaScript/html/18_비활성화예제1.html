@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>약관 모두 동의</title>
+  </head>
+  <body>
+    <h1>약관 동의</h1>
+    <label
+      ><input type="checkbox" id="동의1" onclick="동의버튼()" />약관 1
+      동의</label
+    >
+    <label
+      ><input type="checkbox" id="동의2" onclick="동의버튼()" />약관 2
+      동의</label
+    >
+    <label
+      ><input type="checkbox" id="동의3" onclick="동의버튼()" />약관 3
+      동의</label
+    >
+
+    <button id="signBtn" disabled>회원가입</button>
+
+    <script>
+      function 동의버튼() {
+        const a1 = document.getElementById("동의1").checked;
+        const a2 = document.getElementById("동의2").checked;
+        const a3 = document.getElementById("동의3").checked;
+
+        // 모든 체크박스가 체크된 경우에만 버튼 활성화
+        const ABC = a1 && a2 && a3; //a1~a3 까지 모두 true일 때만 true
+        // disabled = true일 때 비활성화가 됨 false 일 때
+        // disabled = true일 때 버튼 안눌리게 잠김 상태
+        // disabled = false일 때 버튼 눌리게 열린 상태가 됨
+        // 모두 체크가 된 ABC는 true임
+        // 체크된 ABC true값에 !를 붙여 false로 만들어줌으로
+        // disabled = false일 때 버튼 눌리게 열린 상태가 됨
+
+        document.getElementById("signBtn").disabled = !ABC;
+      }
+    </script>
+  </body>
+</html>

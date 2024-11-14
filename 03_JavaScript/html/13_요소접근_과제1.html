@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>회원가입 약관 및 취미 선택</title>
+    <link rel="stylesheet" href="../css/13_요소접근_과제1.css" />
+  </head>
+  <body>
+    <div id="terms-form">
+      <h2>회원가입 약관 및 취미 선택</h2>
+      <h3>약관 동의</h3>
+      <label
+        ><input type="checkbox" name="agree" id="service" />서비스 이용 약관
+        동의</label
+      >
+      <label
+        ><input type="checkbox" name="agree" id="privacy" />개인정보 수집 및
+        이용 동의</label
+      >
+      <label
+        ><input type="checkbox" name="agree" id="marketing" />마케팅 정보 수신
+        동의 (선택)</label
+      >
+      <h3>취미 선택</h3>
+      <label
+        ><input
+          type="checkbox"
+          name="hobby"
+          class="hobby"
+          value="독서"
+        />독서</label
+      >
+      <label
+        ><input
+          type="checkbox"
+          name="hobby"
+          class="hobby"
+          value="운동"
+        />운동</label
+      >
+      <label
+        ><input
+          type="checkbox"
+          name="hobby"
+          class="hobby"
+          value="요리"
+        />요리</label
+      >
+      <label
+        ><input
+          type="checkbox"
+          name="hobby"
+          class="hobby"
+          value="여행"
+        />여행</label
+      >
+
+      <button onclick="submitForm()">확인하기</button>
+      <div id="result"></div>
+    </div>
+    <script src="../js/13_요소접근_과제1.js"></script>
+  </body>
+</html>
