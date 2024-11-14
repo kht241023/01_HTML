@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이름 형식 검사</title>
+    <style>
+      .good {
+        color: green;
+      }
+      .bad {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>이름 형식 검사</h1>
+    <p>이름을 입력하세요. (2~5자 한글)</p>
+    <input type="text" id="nameInput" />
+    <button onclick="checkName()">확인</button>
+    <p id="result"></p>
+    <script>
+      function checkName() {
+        const inputName = document.getElementById("nameInput").value;
+        const result = document.getElementById("result");
+        //                 /^ = 시작      $/ = 끝
+        const nameRegex = /^[가-힣]{2,5}$/; //한글로 2~5자 만 가능
+
+        //이름이 한글 2~5글자 사이인지 체크
+        if (nameRegex.test(inputName)) {
+          result.innerText = "유효한 형식의 이름입니다.";
+          // 초록색으로 4순위 css 글자색 입혀주기
+          result.className = "good";
+        } else {
+          result.innerText =
+            "이름 형식이 유효하지 않습니다. 한글만 작성 가능합니다.";
+          // 빨간색으로 4순위 css 글자색 입혀주기
+          result.className = "bad";
+        }
+      }
+    </script>
+
+    <hr />
+    <h3>입력 받은 값이 휴대전화 번호가 맞는지 확인</h3>
+    <pre>
+        "-" 하이픈 기호 제외하고 핸드폰번호가 10자리에서 11자리 이어야 함
+        010-xxxx-xxxx
+        016-xxx-xxxx
+        - 유효한 경우 : (초록색 글씨로) 유효한 번호 형식 입니다.
+        - 유효하지 않은 경우 : 번호가 유효하지 않습니다. 줄바꿈
+                                숫자만 입력 가능합니다 010 부터 입력해주세요.
+        -초록색, 빨간색 글씨 색은 class를 추가해서 표현
+    </pre>
+
+    전화번호 : <input type="text" id="inputPhone" />
+    <button onclick="checkPhone()">휴대폰번호확인</button>
+    <div id="phoneResult"></div>
+    <script>
+      // 아무값도 입력 안하고 버튼을 클릭했다면 ?
+      // 입력 후 확인바랍니다.
+      //[0-9]    \d
+    </script>
+  </body>
+</html>
