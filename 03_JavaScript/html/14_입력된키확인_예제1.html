@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>입력된 키 확인하기</title>
+    <style>
+      #inputBox {
+        width: 300px;
+        padding: 10px;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>키 입력 이벤트 예제</h2>
+    <p>아래 입력 창에서 키를 누르거나 떼보세요.</p>
+    <!-- 
+    onclick이나 
+     onkeydown 
+     onkeyup
+     ...
+     태그 이름 자체가 input 이기 때문에
+     어떤 값이 들어온다는 것은 인지하지만
+     어떤 값이 들어올지는 컴퓨터가 알지 못하기 때문에
+     이벤트명="기능명(event)" 기능명() 안에 event 작성을 해줘야함
+     
+    
+    -->
+    <input
+      type="text"
+      id="inputBox"
+      placeholder="키를 눌러보세요!"
+      onkeydown="키누르기(event)"
+      onkeyup="누르기끝(event)"
+    />
+    <script>
+      function 키누르기(event) {
+        // web   + log = blog
+        // video + log = vlog
+        // console.log = 개발자가 값을 확인하는 기록 창
+        console.log("!!!!키가 눌렸습니다!!!!");
+      }
+
+      function 누르기끝(event) {
+        console.log("★★★키에서 손을 뗐습니다★★★");
+      }
+    </script>
+  </body>
+</html>

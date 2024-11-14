@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>입력된 키 확인 Enter</title>
+    <style>
+      #inputBox {
+        width: 300px;
+        padding: 10px;
+        font-size: 20px;
+      }
+      #msg {
+        font-size: 20px;
+        color: orange;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Enter 키를 입력했을 때 입력한 값 화면에 보여주기</h1>
+    <p>입력 창에서 Enter 키를 눌러보세요.</p>
+    <input
+      type="text"
+      id="inputBox"
+      placeholder="Enter를 눌러보세요."
+      onkeydown="handleKeyDown(event)"
+      onkeyup="handleKeyUp(event)"
+    />
+
+    <!-- Enter를 입력했을 때 메세지가 보여질 공간 생성하기 -->
+    <div id="msg"></div>
+    <script>
+      /* 키를 밑으로 눌렀을 때 기능 */
+      function handleKeyDown(event) {
+        console.log(
+          "키가 누르는 것을 개발자가 확인하는 창에서 확인하고 있습니다."
+        );
+      }
+
+      /* 키를 밑으로 누르는 것을 종료 했을 때 기능 */
+      function handleKeyUp(event) {
+        console.log(
+          "키 누르기를 종료한 것을 개발자가 확인하는 창에서 확인하고 있습니다."
+        );
+        // 만약에 키보드에서 Enter라고 적힌 키를 눌렀을 때 "안녕하세요." 라는 메세지를 표시하기
+        if (event.key === "Enter") {
+          //innerText  ->   innerHTML 변경해서 안녕하세요가 줄바꿈으로 찍히게 표현
+          document.getElementById("msg").innerHTML += "안녕하세요.<br>";
+          // 문  자 = 가     a      와 같이 한 글자를 나타내는 것
+          // 문자열 = 문자들이 나열된 것 글자가 1글자 이상을 문자열
+          // ``(역 따옴표) 는 안에 변수명과 문자열을 함께 사용할 때 표기
+          // ``(역 따옴표) 를 사용해서 문자열 변수명 함께 작성 `문자열 ${변수명}`
+          // "" 또는 ''(따옴표) 를 사용해서 문자열 변수명 함께 작성 "문자열" + 변수명
+          document.getElementById("msg").innerHTML += `안녕하세요.<br>`;
+        }
+      }
+    </script>
+  </body>
+</html>

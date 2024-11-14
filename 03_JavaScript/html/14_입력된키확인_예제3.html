@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Q W E R로 입력된 키 확인하기</title>
+    <link rel="stylesheet" href="../css/14_입력된키확인_예제3.css" />
+  </head>
+  <body onkeyup="keyUp(event)" onkeydown="keyDown(event)">
+    <div class="container">
+      <div class="key-box">
+        <div class="key">Q</div>
+        <div class="key">W</div>
+        <div class="key">E</div>
+        <div class="key">R</div>
+      </div>
+    </div>
+    <script>
+      /* 화면에서 특정 키보드 값이 입력 될 때마다 
+            입력된 알파벳 배경색 변경
+
+            body 태그 내에 작성된 모든 태그의 키를 바라보겠다 표기
+
+            onclick onkeyup onkeydown ... 과 같은 이벤트는 
+            button 태그나 input 태그에서만 사용할 수 있는 것이아니라
+            상황에 따라 각 태그에 작성할 수 있음
+        */
+
+      // 화면에 존재하는 key 모두 얻어오기
+      /*
+        document.querySelector(".key");  
+            첫번째로 작성된 .key 요소만 선택됨
+        document.querySelectorAll(".key");
+            모든 클래스이름으로 key 가 작성된 .key 요소 모두 선택
+        */
+      const keys = document.querySelectorAll(".key");
+      function keyUp(event) {
+        let idx; // index 줄임말 변수로 많이 사용 인덱스 값을 저장할 변수
+
+        //switch를 이용해서 입력된 키와 일치하는 case 실행
+        // 입력된 키가 대문자로 입력이 되었을 때
+        // 입력된 키를 소문자로 바꿔서 일치하는 case 실행
+        switch (event.key.toLowerCase()) {
+          case "q": // 위에 작성한 toLowerCase 덕분에 Q를 입력해도 q로 입력
+            idx = 0;
+            break;
+          case "w":
+            idx = 1;
+            break;
+          case "e":
+            idx = 2;
+            break;
+          case "r":
+            idx = 3;
+            break;
+          default:
+            return;
+          // 사용 xxxxx keys[0].style.backgroundColor = "yellowgreen";
+        }
+
+        keys[idx].style.backgroundColor = "yellowgreen";
+
+        //switch는 배경색을 보기 위해 결과를 보여주기위해
+        // 진행중인 코드
+
+        // ↓ 아래 코드는 switch로 나타난 결과를 표기하기 위한 코드
+        // idx 번호와 일치하는 keys 배열 요소의 배경색을 변경
+      }
+      //키에서 손가락을 뗐을 때 배경색 white 변경
+      // 마치 keypress 처럼 꾹 누르고 있을 때만 배경색 흰색
+      function keyDown(event) {}
+    </script>
+  </body>
+</html>

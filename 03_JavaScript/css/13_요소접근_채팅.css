@@ -1,3 +1,27 @@
+/*
+* html에 작성된 모든 값에
+태그에 기존으로 갖고있는
+성질을 모두 변화시킨다는 의미
+
+*{
+margin:0;
+padding:0;
+준다는 것은
+아래 모든 태그 클래스 아이디에
+margin padding을 기본으로
+0에서 시작하고
+추가적으로 작성하고자 하는 
+margin padding은 따로 작성해서
+덮어쓰기를 진행하라는 표기
+*/
+
+.container,
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .container {
   width: 360px;
   border: 1px solid black;
@@ -28,3 +52,44 @@ span {
   border-radius: 5px;
   background-color: rgb(254, 234, 51);
 }
+
+/*채팅 입력하는 부분*/
+
+#chatting-input {
+  width: 100%;
+  display: flex;
+  height: 30px;
+}
+
+#chatting-input > input {
+  height: 100%;
+  width: 80%;
+
+  /*#chatting-input width :300px 이기 때문 
+#chatting-input>input width: 80% 준 것은
+        240px를 표현한 의미
+*/
+  outline: none;
+  padding-left: 5px;
+}
+
+#chatting-input > button {
+  height: 100%;
+  width: 20%;
+  /*#chatting-input width :300px 이기 때문 
+  #chatting-input>button width: 20% 준 것은
+                                60px를 표현한 의미
+*/
+}
+
+/*
+#chatting-input>input
+#chatting-input div 안에 
+input 요소를 꾸며줌
+
+#chatting-input input
+
+#chatting-input>input -> 
+ #chatting-input의 크기를  넘지 않는 기준으로
+ input 설정을 마음껏 할 수 있음
+*/
