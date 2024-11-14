@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>입력된 키 확인</title>
+    <link rel="stylesheet" href="../css/14_입력된키확인_예제3.css" />
+  </head>
+  <body onkeyup="handleKeyUp(event)">
+    <div class="container">
+      <div class="key-box">
+        <div class="key">A</div>
+        <div class="key">B</div>
+        <div class="key">C</div>
+        <div class="key">D</div>
+        <div class="key">E</div>
+      </div>
+    </div>
+    <script>
+      const keys = document.querySelectorAll(".key");
+      function handleKeyUp(event) {
+        let idx; // 인덱스 값을 저장할 변수
+
+        // 입력된 키를 소문자로 바꿔서 일치하는 case 실행
+        switch (event.key.toUpperCase()) {
+          case "A":
+            idx = 0;
+            break;
+          case "B":
+            idx = 1;
+            break;
+          case "C":
+            idx = 2;
+            break;
+          case "D":
+            idx = 3;
+            break;
+          case "E":
+            idx = 4;
+            break;
+          default:
+            return; //함수 종료
+        }
+        // switch case문으로 나오는 결과를 작성해줄 것
+        keys[idx].style.backgroundColor = "#2a9d8f";
+        keys[idx].style.color = "white";
+
+        // 키에서 손을 뗀지 3초가 지나면 익명함수를 사용해서
+        // 배경색 white 글자색 #333 변경
+        setTimeout(() => {
+          keys[idx].style.backgroundColor = "white";
+          keys[idx].style.color = "#333";
+        }, 300);
+      }
+      /*
+        문자열.toLowerCase() : 영어를 모두 소문자로 변경
+        문자열.toUpperCase() : 영어를 모두 대문자로 변경
+        키가 눌려졌을 때 배경색 : #2a9d8f
+        키가 눌려졌을 때 글자색 : white
+
+        키에서 손을 뗐을 때 3초 후에 익명함수를 사용해서 
+        배경색 white 글자색 #333 변경
+        */
+    </script>
+  </body>
+</html>

@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>100.함수,구문모음</title>
+
+    <style>
+        pre *{
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>문자열 관련 함수</h1>
+    <pre>
+
+        <h3>대소문자 변환</h4>
+            
+        <h4>
+            문자열.toLowercase() : 소문자 변환
+
+            문자열.toUppercase() : 대문자 변환
+        </h4>
+
+            const str = "JavaScript";
+            console.log(str.toLowercase()); // javascript
+            console.log(str.toUpperCase()); // JAVASCRIPT
+
+        ---------------------------------------------------------------------------
+
+        <h3>문자열 자르기</h3>
+
+        <h4>
+            문자열.substring(시작인덱스, 종료인덱스) : 시작 인덱스 이상, 종료 인덱스 미만 사이 문자열 반환 
+
+            문자열.substring(시작인덱스) : 시작 인덱스부터 끝까지 자른 문자열 반환 : 문자열.substring(시작인덱스, 종료인덱스)
+        </h4>
+           
+            const str = "JavaScript";
+            console.log( str.substring(0,4) );  // "Java"
+            console.log( str.substring(4) );   // "Script"
+        
+        ---------------------------------------------------------------------------
+
+        <h3>문자열 검색 </h3>
+
+        <h4>
+            문자열.indexOf("검색할문자열") : 앞에서 부터 검색
+
+            문자열.lastIndexOf("검색할문자열") : 뒤에서 부터 검색
+
+            문자열.includes("검색할문자열") : 검색할 문자열이 있다면 true, 아니면 false 반환
+
+            * indexOf() 계열 : 검색 결과가 있으면 index , 없으면 -1 반환
+        </h4>
+
+            const str = "JavaScript";
+            console.log( str.indexOf("a") );  // 1
+            console.log( str.lastIndexOf("a") );  // 3
+            console.log( str.indexOf("가") );  // -1
+
+            console.log( str.includes("Java") );  // true
+            console.log( str.includes("가") );  // false
+
+
+
+        ---------------------------------------------------------------------------
+
+        <h3>문자열 분할 / 결합 </h3>
+
+        <h4>
+            문자열.split("구분자") : 문자열을 구분자로 분할
+
+            문자열.join("구분자") : 문자열 결합
+        </h4>
+
+            const fruits = "apple,orange,banana";
+
+            const fruitList = fruits.split(",");  //  ["apple", "orange", "banana"]
+
+            const joinedFruits = fruitList.join(" and ");  //  "apple and orange and banana"
+
+        ---------------------------------------------------------------------------
+        
+        <h3>문자열 변환(치환)</h3>
+        
+        <h4>
+            문자열.replace("변환 대상 문자열", "변경할 문자열") : 문자열 변경
+        </h4>
+        
+            const str = "Hello JavaScript";
+            const newStr = str.replace("JavaScript", "자바"); // "Hello 자바"
+        
+
+        ----------------------------------------------------------------------------
+        
+        <h3>문자열이 특정 패턴으로 시작/끝나는지 확인</h3>
+
+        <h4>
+           문자열.startsWith("특정 문자열") : 특정 문자열로 시작하면 true, 아니면 false
+
+           문자열.endsWith("특정 문자열")   : 특정 문자열로 끝나면 true, 아니면 false
+        </h4>
+
+            "JavaScript".startsWith("Java") : true
+            "JavaScript".endsWith("Script") : true
+    </pre>
+
+    <hr><hr>
+
+
+    <h1>숫자 관련 함수</h1>
+
+    <pre>
+        <h3>올림, 내림, 반올림</h3>
+    
+        <h4>
+            Math.ceil(숫자)  : 소수점 이하 올림
+    
+            Math.floor(숫자) : 소수점 이하 내림
+    
+            Math.round(숫자) : 소수점 이하 반올림
+        </h4>
+
+            console.log( Math.ceil(10.1) );  // 11
+            console.log( Math.floor(10.9) );  // 10
+
+            console.log( Math.round(10.5) );  // 11
+            console.log( Math.round(10.4) );  // 10
+
+
+        ----------------------------------------------------------------------------
+        <h3>최대값, 최소값</h3>
+
+        <h4>
+            Math.max(숫자1,숫자2,...) : 전달 인자로 작성된 숫자 중 최대값
+            Math.min(숫자1,숫자2,...) : 전달 인자로 작성된 숫자 중 최소값
+        </h4>
+
+            const maxNumber = Math.max(10, 5, 20, 15); // 20
+            const minNumber = Math.min(10, 5, 20, 15); .. 5
+
+
+        ----------------------------------------------------------------------------
+
+        <h3>절대값</h3>
+
+        <h4>
+            Math.abs(숫자) : 숫자의 절대값 반환
+        </h4>
+
+            console.log( Math.abs(-10) );  // 10
+
+        ---------------------------------------------------------------------------
+
+        <h4>난수 생성</h4>
+
+        <h4>
+            Math.random() : 0.0 이상 1.0 미만의 난수 반환
+        </h4>
+
+            console.log(Math.random());  // 0.0 이상 1.0 미만의 난수
+
+
+        ---------------------------------------------------------------------------
+
+        <h3>제곱, 제곱근</h3>
+        
+        <h4>
+            Math.pow(숫자1,숫자2) : 숫자1에 따라 숫자2의 제곱값
+
+            Math.sqrt(숫자) : 숫자의 제곱근값
+        </h4>
+
+            const square = Math.pow(5, 2); // 5의 2제곱
+            const squareRoot = Math.sqrt(25); // 25의 제곱근 (루트 25)
+            
+            console.log("제곱:", square);       // 25
+            console.log("제곱근:", squareRoot); // 5
+
+
+        ---------------------------------------------------------------------------
+        
+        <h3>고정 소수 표기법으로 소수 지정</h3>
+
+        <h4>
+            숫자.toFixed(자릿수) : 숫자를 지정된 자릿수에서 반올림해서 문자열로 반환
+        </h4>
+
+            const num = 15.6789;
+            const roundedNum = num.toFixed(2);
+            
+            console.log(roundedNum); // "15.68"
+
+
+        ---------------------------------------------------------------------------
+    </pre>
+
+
+    <hr><hr>
+
+    <h3>배열 관련 함수</h3>
+
+    <pre>
+        <h3>배열 요소 검색</h3>
+
+        <h4>
+            배열.indexOf(검색값)     : 배열 요소를 앞에서 부터 검색
+
+            배열.lastIndexOf(검색값) : 배열 요소를 뒤에서 부터 검색
+
+            배열.includes(검색값)    : 배열 요소 중 검색값 있다면 true, 아니면 false 반환
+
+            * indexOf() 계열 : 검색 결과가 있으면 index , 없으면 -1 반환
+        </h4>
+
+            const numbers = [10, 20, 30, 40, 10];
+
+            console.log( numbers.indexOf(10) );  // 0
+            console.log( numbers.lastIndexOf(10) );  // 4
+
+            console.log( numbers.indexOf(999) );  // -1
+
+            console.log( numbers.includes(30) );  // true
+
+
+        ---------------------------------------------------------------------------
+
+        <h3>배열 요소 추가/제거</h3>
+
+        <h4>
+            배열.push(요소) : 배열 끝에 요소 추가
+            배열.pop()      : 배열 끝에 요소를 제거하고 반환
+
+            배열.unshift(요소) : 배열 앞에 요소 추가
+            배열.shift()   : 배열 앞에 요소를 제거하고 반환
+
+            <!-- splice: 원본에 영향을 줌-->
+            배열.splice(시작 인덱스[, 제거할 요소의 수  [, 대체할 요소...]] ) : 배열에서 일부분을 추출 후 대체 값 대입
+
+            <!-- slice : 원본에 영향 없음 -->
+            배열.slice(시작 인덱스[, 종료 인덱스])  : 배열에서 일부분을 추출(잘라내기)
+        </h4>
+
+            const colors = ["빨강", "파랑", "초록"];
+
+            colors.push("노랑"); // 배열 끝에 요소 추가
+            console.log("요소 추가 후:", colors); // ["빨강", "파랑", "초록", "노랑"]
+            
+
+            const removedColor = colors.pop(); // 배열 끝의 요소 제거
+            console.log("제거된 요소:", removedColor); // "노랑"
+            console.log("요소 제거 후:", colors); // ["빨강", "파랑", "초록"]
+            
+
+            colors.unshift("주황"); // 배열 앞에 요소 추가
+            console.log("앞에 요소 추가 후:", colors); // ["주황", "빨강", "파랑", "초록"]
+            
+
+            const shiftedColor = colors.shift(); // 배열 앞의 요소 제거
+            console.log("제거된 앞의 요소:", shiftedColor); //  "주황"
+            console.log("앞의 요소 제거 후:", colors); // ["빨강", "파랑", "초록"]
+
+
+            const spliceColors = colors.splice(1, 2, "노랑"); // 배열의 1번 인덱스 부터 2칸을 잘라내고, 새로운 요소 "노랑 추가"
+            console.log("spliceColors:", spliceColors); // ["파랑", "초록"]
+            console.log("colors:", colors); // ["빨강", "노랑"]
+
+
+            const sliceColors = colors.slice(1,1); // 배열의 1번 인덱스 부터 1칸 잘라냄
+            console.log("sliceColors:", sliceColors); // ["노랑"]
+            console.log("colors:", colors); // ["빨강"]
+
+        ---------------------------------------------------------------------------
+
+
+        <h3>배열.forEach()</h3>
+
+        <h4>
+            - 배열 내 요소를 순차 접근하며 지정된 구문을 수행
+
+            [작성법]
+            배열.forEach( (현재 요소 [,index [, 현재 배열]]) => {
+                반복 수행할 구문
+            });
+        </h4>
+
+            const numbers = [1, 2, 3, 4, 5];
+
+            numbers.forEach(function (number) {
+                console.log(number);
+            });
+        
+            // 1
+            // 2
+            // 3
+            // 4
+            // 5
+
+
+        ---------------------------------------------------------------------------
+
+        <h3>배열.map()</h3>
+
+        <h4>
+            - 배열 내 요소를 순차적으로 접근하며 지정된 구문을 수행한 후
+              끝에 반환된 값을 모아 새로운 배열을 만들어 반환
+
+            [작성법]
+            배열.map((현재 요소 [,index [,현재 배열]) => {
+                return 변경된 요소;
+            });
+        </h4>
+
+            const numbers = [1, 2, 3, 4, 5];
+
+            const squaredNumbers = numbers.map(function (number) {
+                return number * number;
+            });
+            
+            console.log(squaredNumbers); //  [1, 4, 9, 16, 25]
+
+
+        ---------------------------------------------------------------------------
+
+        <h3>배열.reduce()</h3>
+
+        <h4>
+            - 배열 내 요소를 순차적으로 접근하여 지정된 구문을 수행한 후
+              끝에 계산된(누적된) 값 하나를 반환
+
+            [작성법]
+            var result = array.reduce(function(accumulator, 현재 요소[,index [,array]]) {
+                return accumulator + value;
+
+            }, initialAccumulator);
+
+            // accumulator: 누산기, 현재까지의 축적된 값 ( == sum)
+            // initialAccumulator: 초기 누산기 값
+        </h4>
+
+            const numbers = [1, 2, 3, 4, 5];
+
+            const sum = numbers.reduce(function (acc, current) {
+                return acc + current;
+            }, 0);
+            
+            console.log(sum); //  15
+    </pre>
+
+    <hr><hr>
+
+    <h1>향상된 for문</h1>
+
+    <pre>
+        - 배열의 요소 또는 객체의 키를 순차적으로 접근할 때 사용하는 for문
+
+        - 별도의 index와 범위를 지정하지 않음
+
+        - 요소/키 개수 만큼 반복
+
+        - 반복 시 마다 요소/키를 앞에서 부터 순서대로 하나씩 꺼냄
+    </pre>
+
+
+    <pre>
+        <h3>for ~ of 구문</h3>
+
+        <h4>
+            - 반복 속성(iterable)이 있는 객체에서 사용 가능한 향상된 for문
+            ex) Array, HTMLCollections, NodeList
+        </h4>
+
+            const numbers = [1,2,3];
+
+            for (const number of numbers) {
+                console.log(number);
+            }
+
+            // 1
+            // 2
+            // 3
+            
+
+
+        ---------------------------------------------------------------------------
+
+        <h3>for ~ in 구문 </h3>
+
+        <h4>
+            - 객체의 키를 순차적으로 접근할 때 사용하는 향상된 for문
+        </h4>
+
+            const obj = {"name":"홍길동", "age":25};
+
+            for (const key in obj) {
+                console.log(key, obj[key]);
+            }
+
+            // name 홍길동
+            // age 25
+    </pre>
+
+    
+    <ul>
+        <li class="test">1</li>
+        <li class="test">2</li>
+        <li class="test">3</li>
+        <li class="test">4</li>
+        <li class="test">5</li>
+    </ul>
+
+
+
+
+   
+</body>
+</html>

@@ -58,17 +58,63 @@
           // 사용 xxxxx keys[0].style.backgroundColor = "yellowgreen";
         }
 
-        keys[idx].style.backgroundColor = "yellowgreen";
-
         //switch는 배경색을 보기 위해 결과를 보여주기위해
         // 진행중인 코드
 
         // ↓ 아래 코드는 switch로 나타난 결과를 표기하기 위한 코드
         // idx 번호와 일치하는 keys 배열 요소의 배경색을 변경
+        keys[idx].style.backgroundColor = "yellowgreen";
+
+        // 일정 시간 후 다시 흰색으로 변경하는 스크립트를 세팅
+        /**
+         * setTimeout = 자바스크립트에서 만든 기능으로 일정시간이 종료되면 특정 기능 수행
+         * 구버전
+         * setTimeout(함수명, 몇초, 전달인자);
+         * 기능이 진행될 때 몇 초 후에 기능이 진행될지 설정 번호칸 선택사항
+         * */
+        //setTimeout(색상되돌리기, 200, idx);
+
+        /**
+         * 신버전
+         * setTimeout(함수, 지연시간); 코드를 단축시켜서 개발자가 편하게 사용할 수 있게 기능 개선!
+         *
+         * setTimeout( ()  =>  {설정하고자 하는 기능 코딩 작성 } , 지연시간);
+         * */
+
+        // 일정 시간 후 다시 흰색으로 변경 (**신버전**)
+        setTimeout(() => {
+          keys[idx].style.backgroundColor = "white";
+        }, 200);
       }
-      //키에서 손가락을 뗐을 때 배경색 white 변경
-      // 마치 keypress 처럼 꾹 누르고 있을 때만 배경색 흰색
-      function keyDown(event) {}
+
+      // 구버전
+      // 특정 키의 배경색을 흰색으로 변경하는 함수 설정
+      function 색상되돌리기(idx) {
+        keys[idx].style.backgroundColor = "white";
+      }
+
+      function keyDown(event) {
+        let idx;
+
+        switch (event.key.toLowerCase()) {
+          case "q":
+            idx = 0;
+            break;
+          case "w":
+            idx = 1;
+            break;
+          case "e":
+            idx = 2;
+            break;
+          case "r":
+            idx = 3;
+            break;
+          default:
+            return;
+        }
+
+        keys[idx].style.backgroundColor = "white";
+      }
     </script>
   </body>
 </html>
