@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>함수 없는 스크립트</title>
+  </head>
+  <body>
+    <h1>함수(기능) 안에 속성설정이 담겨져 있지 않은 경우</h1>
+    <h3 id="msg">안녕하세요.</h3>
+
+    <h3 id="btn-msg">반갑습니다.</h3>
+    <button onclick="버튼()">글자바꾸기</button>
+    <script>
+      const msg = document.getElementById("msg");
+      const btnMsg = document.getElementById("btn-msg");
+      msg.innerText = "점심식사 맛있게 하세요.";
+      function 버튼() {
+        btnMsg.innerText = "환영합니다. 잘 지내시죠?";
+      }
+    </script>
+  </body>
+</html>

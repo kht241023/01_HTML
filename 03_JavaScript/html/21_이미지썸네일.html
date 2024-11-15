@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이미지 미리보기</title>
+    <link rel="stylesheet" href="../css/21_이미지썸네일.css" />
+  </head>
+  <body>
+    <!-- accept : 
+     * 모든 항목
+     가져오는 파일 중에서 가져올 수 있도록 허용된 확장자 범위
+     image/* 모든 이미지 파일 (.jpg, .png, .gif 등)
+                accept=".png, .jpg"
+
+     audio/* 모든 오디오 파일 (.mp3, .wav 등)
+     video/* 모든 비디오 파일 (.mp4, .avi 등)
+
+     모든 비디오와 오디오 파일 가져올 수 있음
+     vido/*, audio/* 
+    -->
+    <input type="file" id="imgUpload" accept="image/*" />
+    <img id="imgPreview" />
+    <script>
+      const imgUp = document.getElementById("imgUpload");
+      imgUp.addEventListener("change", (event) => {
+        const file = event.target.files[0];
+
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = (event) => {
+            document.getElementById("imgPreview").src = event.target.result;
+            document.getElementById("imgPreview").style.display = "block";
+          };
+          reader.readAsDataURL(file);
+        }
+      });
+    </script>
+  </body>
+</html>
