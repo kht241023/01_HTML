@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>window 내장 객체</title>
+  </head>
+  <body>
+    <h1>Window 내장 객체</h1>
+    <pre>
+         - 인터넷 창 자체를 나타내는 객체
+
+         - 자바스크립트 모든 기능에서 가장 최우선
+
+         - window의 자식 객체
+            1) DOM(Document Object Model) : document
+                (브라우저에서 내용(페이지) 출력 부분)
+    </pre>
+
+    <hr />
+    <h3>윈도우의 기능임을 생략해도 되는 기능들</h3>
+    <pre>
+        생략가능
+        (window.)alert("글자")
+        (window.)prompt("글자")
+        (window.)setTimeout(함수, 지연시간)
+    </pre>
+
+    <hr />
+    <h3>앞에 윈도우를 붙여줘야하는 기능들</h3>
+    <pre>
+        (window.)location.href = "이동할.html"
+        window 생략할 수 있지만 상황에 따라 파일을 가져오는
+        위치가 변경될 수 있기 때문에 명확한 위치를 표기하기 위해
+        window를 붙여주는 것이 좋음
+
+        
+
+        대한민국 기준
+        031 - 경기도
+        033 - 강원도
+        전화번호로 지역을 표기하는 것처럼
+        각자의 컴퓨터나 모바일 통신과 같은 전파에서도 위치를 설정할 수 있고
+        위치가 잡히기도 함
+
+        미국 - 3.xxxxxx
+        한국 - 121.xxxxxx
+        중국 - 36.xxxxxx
+
+        window   = 내 컴퓨터
+        location = 내가 현재 머물고있는 페이지(html 파일)을 기준으로
+        href     = 주소를 가져와라
+    </pre>
+
+    <hr />
+    <h6>** href와 src 차이</h6>
+    <pre>
+        링크나 리소스를 참조할 때 사용하지만 사용 용도가 다름
+
+        [href] = 페이지 이동이나 기능을 참조할 때 사용
+                css파일, 페이지 간 이동, 외부 웹 페이지 링크  등
+        [src]  = 페이지 안에 이미지, 동영상, JS 파일 등 외부 소스를 삽입할 때 사용
+                js파일, 이미지, 동영상 등
+    </pre>
+  </body>
+</html>

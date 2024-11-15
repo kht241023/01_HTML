@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>메인</title>
+    <!-- 
+        href src 폴더로 css js html 파일을 분류했을 때만
+        ../ 사용 
+    -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>행복나라 사이트</h1>
+      <p>행복나라에 오신 것을 환영합니다.</p>
+    </header>
+    <nav>
+      <a href="메인.html">메인페이지</a>
+      <a href="약관동의.html">회원가입</a>
+    </nav>
+
+    <!-- 회원가입을 하기 전에 약관동의 작성 후 진행 화면 -->
+    <h2>약관 동의</h2>
+    <form>
+      <label> <input type="checkbox" id="terms1" />(필수) 이용약관 동의 </label>
+      <br />
+      <label>
+        <input type="checkbox" id="terms2" />(필수) 개인정보 수집 및 이용 동의
+      </label>
+      <br />
+      <label>
+        <input type="checkbox" id="terms3" />(필수) 마케팅 정보 수신 동의
+      </label>
+      <br />
+      <!-- 
+        form 태그 내부에서 button을 작성했을 때 type에서 
+        type = button submit 주었을 때 차이  
+        submit = form 태그 옆에 action 속성으로 이동하는 규칙
+                    <form> <button type="submit">버튼</button> </form> 
+                        form 태그 속성에 action으로 이동하는 공간을 작성하지 않으면
+                                계속 현재페이지에서 새로고침만 될 것
+
+        button  = 기본적으로 폼을 제출하지 않기 때문에 단순히
+                    자바스크립트에서 작성한 코드만 실행
+      -->
+      <button type="button" onclick="checkTerm()">동의하고 회원가입</button>
+    </form>
+    <script src="script.js"></script>
+  </body>
+</html>
