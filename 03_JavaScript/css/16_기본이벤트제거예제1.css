@@ -1,0 +1,47 @@
+body {
+  height: 100vh; /** 화면에서 보이는 높이만큼 높이를 알아서 설정  100% 로 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.container {
+  padding: 20px;
+  border-radius: 8px;
+  width: 320px;
+  text-align: center;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: yellowgreen;
+}
+
+button {
+  width: 100%;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: not-allowed;
+  background-color: #999;
+}
+
+/* disabled hover가 동작하지 않음
+hover는 disabled 관계 없이 버튼위에 마우스가 올라가면 동작함
+
+button:disabled 의 반대는
+button:enabled 임
+
+button 기본적으로 enabled 활성화 상태
+개발자가 원하는 조건에서만 버튼이 활성화 될 수 있도록 설정했기 때문에
+
+disabled -> enabled 상태가 되었을 때 버튼 활성화 색상과 마우스표기를 진행
+*/
+
+button:enabled {
+  background-color: #007bff;
+  cursor: pointer;
+}

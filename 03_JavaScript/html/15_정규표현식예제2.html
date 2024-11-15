@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이메일 유효성 검사</title>
+    <style>
+      #error-msg,
+      #err-msg {
+        color: red;
+        font-size: 10px;
+        display: none; /*처음에는 작성한 이메일 값이 없으니 가리기 설정*/
+      }
+    </style>
+  </head>
+  <body>
+    <h1>정규표현식을 활용해서 이메일 값이 올바르게 들어왔는지 확인</h1>
+    <input type="text" id="user-email" placeholder="이메일을 입력하세요." />
+    <button onclick="checkEmail()">확인</button>
+    <p id="error-msg">유효하지 않은 이메일 형식입니다.</p>
+    <hr />
+    <h2>핸드폰 번호 중간에 - 들어가 있는지 확인</h2>
+    <input
+      type="text"
+      id="user-phone"
+      placeholder="010-xxxx-xxxx -(하이픈) 작성 요망"
+    />
+    <button onclick="checkPhone()">번호 확인</button>
+    <p id="err-msg">유효하지 않은 핸드폰 번호 형식입니다.</p>
+    <script>
+      const userPhone = document.getElementById("user-phone");
+      const errMsg = document.getElementById("err-msg");
+      const phonePattern1 = /^010-[0-9]{4}-[0-9]{4} $/;
+      const phonePattern2 = /^010-\d{4}-\d{4} $/;
+
+      function checkPhone() {
+        if (phonePattern1.test(userPhone.value)) {
+          errMsg.style.display = "block";
+        }
+      }
+    </script>
+    <script src="../js/15_정규표현식예제2.js"></script>
+  </body>
+</html>
